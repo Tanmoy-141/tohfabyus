@@ -3,7 +3,7 @@ import { useNavigate, Link } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { Eye, EyeOff, Mail, Lock, User, Phone } from "lucide-react";
 import { useAuth } from "../context/AuthContext";
-import "./login.css";
+import "./Login.css";
 
 export function Signup() {
   const { login, isLoggedIn } = useAuth();
