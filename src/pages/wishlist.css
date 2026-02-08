@@ -1,0 +1,116 @@
+/* ===============================
+   WISHLIST PAGE
+================================ */
+
+.wishlist-bg {
+  --wm-opacity: 0.065;
+}
+
+/* Title */
+.wishlist-title {
+  font-size: 1.4rem;
+  margin-bottom: 30px;
+  color: #5a3e3e;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.15);
+  padding: 10px 15px;
+  background-color: #ffffff02;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+/* ===============================
+   EMPTY STATE
+================================ */
+
+.wishlist-empty {
+  margin-top: 80px;
+  text-align: center;
+  color: #8a6f6f;
+}
+
+.wishlist-empty svg {
+  margin-bottom: 16px;
+  color: #df578b;
+}
+
+.wishlist-empty p {
+  font-size: 1.1rem;
+  font-weight: 500;
+  margin-bottom: 4px;
+}
+
+.wishlist-empty span {
+  font-size: 0.85rem;
+  opacity: 0.8;
+}
+
+/* ===============================
+   WISHLIST CARD OVERRIDES
+================================ */
+
+/* IMPORTANT: force remove button visible on wishlist page */
+.wishlist-bg .wishlist-btn {
+  opacity: 1 !important;
+  transform: scale(1) !important;
+  background: rgba(255, 255, 255, 0.9);
+  color: #e63946;
+}
+
+/* Hover feedback */
+.wishlist-bg .wishlist-btn:hover {
+  background: #fff;
+  color: #b71c1c;
+  transform: scale(1.1);
+}
+
+/* Make SVG X icon visible */
+.wishlist-bg .wishlist-btn svg {
+  stroke: currentColor;
+  stroke-width: 2;
+  stroke-linecap: round;
+  fill: none;
+}
+
+/* Slightly stronger card presence */
+.wishlist-bg .store-card {
+  box-shadow: 0 10px 26px rgba(0, 0, 0, 0.12);
+}
+
+/* ===============================
+   HEADER ICON (UNCHANGED)
+================================ */
+
+.wishlist-icon-link {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: #f86d6d;
+  transition: transform 0.35s ease, opacity 0.35s ease;
+}
+
+.wishlist-icon-link:hover {
+  color: #df578b;
+  transform: scale(1.2);
+  opacity: 0.92;
+}
+
+.wishlist-count {
+  position: absolute;
+  bottom: -15px;
+  left: 15%;
+  background: #ffffff;
+  color: #000000;
+  font-size: 10px;
+  font-weight: 600;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.wishlist-icon {
+  color: rgb(252, 117, 169);
+}

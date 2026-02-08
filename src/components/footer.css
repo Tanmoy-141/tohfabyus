@@ -1,0 +1,94 @@
+.site-footer {
+  margin-top: auto;
+  padding: 1.5rem 1rem;
+  background: #fff5f5!important;
+}
+
+/* Sections */
+.footer-sections {
+  gap: 2rem;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-bottom: 1.5rem;
+}
+
+.footer-block {
+  max-width: 260px;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+/* Titles */
+.footer-title {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-weight: 600;
+  color: #924242!important;
+  text-decoration: #924242 underline!important;
+}
+
+/* Text */
+.footer-text {
+  font-size: 0.9rem;
+  color: #6e4c4c;
+  line-height: 1.4;
+}
+
+.footer-text a {
+  color: #924242!important;
+  transition: transform 0.35s ease, opacity 0.35s ease;
+}
+
+.footer-text a:hover {
+  color: #df578b!important;
+  transform: scale(1.05);
+  opacity: 0.9;
+}
+
+/* Newsletter */
+.newsletter-form {
+  gap: 6px;
+}
+
+.newsletter-form input {
+  flex: 1;
+  padding: 6px 8px;
+  border-radius: 6px;
+  border: 1px solid #e2c0c0!important;
+  font-size: 0.85rem;
+}
+
+.newsletter-form button {
+  padding: 6px 10px;
+  border-radius: 6px;
+  border: none;
+  background: #924242;
+  color: #fff;
+  font-size: 0.85rem;
+  cursor: pointer;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.newsletter-form button:hover {
+  background: #df578b!important;
+  transform: scale(1.05);
+  opacity: 0.9;
+}
+
+/* Bottom row (already matches your footer-content) */
+.footer-content {
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.footer-content ul {
+  display: flex;
+  gap: 1rem;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}

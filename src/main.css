@@ -1,0 +1,587 @@
+/* ===============================
+   APP BACKGROUND
+================================ */
+.app-bg {
+ background:linear-gradient(
+    135deg,
+    rgba(156, 209, 253, 0.288),
+    rgba(236, 189, 183, 0.24),
+    rgba(240, 140, 178, 0.171),
+    rgba(156, 209, 253, 0.301)
+  );
+}
+
+
+/* ===============================
+   NAVBAR - MODERN MINIMAL
+================================ */
+.header-navbar {
+  background: linear-gradient(
+    145deg,
+    #9cd1fd67,
+    #ecbdb763,
+    #fab9d27e,
+    #9cd1fdb2
+  );
+  box-shadow: 6px 8px 9px rgba(0, 0, 0, 0.04);
+  transition: all 0.3s ease;
+  position: fixed;
+  isolation: isolate;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+.navbar {
+  min-height: 70px;
+  padding: 0.5rem 1rem;
+}
+
+/* ===============================
+   BRAND - SIMPLIFIED
+================================ */
+.header-brand {
+  display: flex;
+  align-items: center;
+}
+
+.brand-link {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.brand-logo {
+  height: 52px;
+  width: 52px;
+  border-radius: 50%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+  box-shadow: 8px 8px 8px rgba(0, 0, 0, 0.04);
+
+}
+
+.brand-logo:hover {
+  transform: scale(1.05);
+}
+
+.brand-title-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.brand-title {
+  font-size: 24px;
+  font-weight: 700;
+  color: #d41616;
+  letter-spacing: -0.5px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  line-height: 1;
+  transition: transform 0.3s ease;
+}
+
+.brand-title:hover {
+   transform: scale(1.05);
+}
+
+.brand-highlight {
+  font-size: 11px;
+  font-weight: 500;
+  color: #3a3a3a;
+  letter-spacing: 1px;
+  margin-top: 2px;
+}
+
+.home-highlight {
+  font-family: 'FMBoylar sans pro', sans-serif;
+  font-weight: 600;
+  font-size: 1.5rem;
+  color: #c93838;
+  transition: color 0.5s ease;
+}
+
+.home-highlight:hover {
+  color: #d41616;
+  transform: scale(1.05);
+}
+
+.home-title {
+  font-size: 2.2rem;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-weight: 500;
+  color: #000000;
+}
+
+.home-text {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  color: #2b2a2a;
+  line-height: 1.6;
+}
+
+.home-card {
+  padding: 125px 50px;
+ background: linear-gradient(
+    120deg,
+    #76c1ffef,
+    #8597ffea,
+    #819fdff5,
+    #6d5cccfa
+  );
+  border-bottom: 0px solid rgba(0, 0, 0, 0.562);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.397);
+ 
+  width: 100%;
+ 
+}
+
+
+/* ===============================
+   NAV LINKS - CLEAN & MINIMAL
+================================ */
+.header-nav {
+  gap: 2rem;
+}
+
+.nav-link-custom {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #1a1a1a;
+  padding: 0.5rem 0 !important;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  position: relative;
+  transition: color 0.2s ease;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.nav-link-custom::after {
+  content: "";
+  position: absolute;
+  bottom: -20px;
+  left: -2px;
+  width: 0;
+  height: 3px;
+  background: #d41616;
+  transition: width 0.3s ease;
+}
+
+.nav-link-custom:hover {
+  color: #d41616 !important;
+}
+
+.nav-link-custom:hover::after {
+  width: 100%;
+}
+
+.nav-link-custom.active {
+  color: #d41616 !important;
+  font-weight: 600;
+}
+
+.nav-link-custom.active::after {
+  width: 100%;
+}
+
+/* ===============================
+   NAV ARROW - WITH HOVER EFFECT
+================================ */
+.nav-arrow {
+  display: inline-block;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  opacity: 0;
+}
+
+.nav-link-custom:hover .nav-arrow {
+  transform: rotate(0.5turn);
+  opacity: 1;
+}
+
+.nav-link-custom.active .nav-arrow {
+  opacity: 1;
+}
+
+/* ===============================
+   HEADER ACTIONS - MODERN ICONS
+================================ */
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.nav-icon-link {
+  display: flex;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem;
+  color: #000000;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  background: none;
+  border: none;
+  cursor: pointer;
+  border-radius: 8px;
+}
+
+.nav-icon-link:hover {
+  color: #d41616 !important;
+  background: #f5f5f5;
+}
+
+.user-dropdown-toggle {
+  background: none !important;
+  border: none !important;
+  box-shadow: none !important;
+  padding: 0.5rem;
+  border-radius: 8px;
+  transition: background 0.2s ease;
+}
+
+.user-dropdown-toggle:hover {
+  background: #f5f5f5;
+}
+
+.dropdown-menu-end {
+  right: 0;
+  left: auto;
+  border: 1px solid #e8e8e8;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+  border-radius: 8px;
+  padding: 0.5rem;
+  min-width: 180px;
+}
+
+.dropdown-item {
+  padding: 0.6rem 1rem;
+  font-size: 0.9rem;
+  border-radius: 6px;
+  transition: all 0.2s ease;
+}
+
+.dropdown-item:hover {
+  background: #f5f5f5;
+  color: #d41616;
+}
+
+.user-dropdown-toggle::after {
+  display: none !important;
+}
+
+/* Cart badge - modern style */
+.cart-badge {
+  position: absolute;
+  top: 2px;
+  right: 2px;
+  background: #d41616;
+  color: white;
+  font-size: 10px;
+  font-weight: 600;
+  border-radius: 10px;
+  min-width: 18px;
+  height: 18px;
+  padding: 0 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid white;
+}
+
+/* ===============================
+   SEARCH - CLEAN DESIGN
+================================ */
+.input-group {
+  height: 38px;
+  max-width: 300px;
+}
+
+.form-control {
+  height: 38px;
+  font-size: 0.9rem;
+  border: 1px solid #e8e8e8;
+  border-radius: 8px;
+  transition: all 0.2s ease;
+}
+
+.form-control:focus {
+  box-shadow: 0 0 0 3px rgba(212, 22, 22, 0.1);
+  border-color: #d41616;
+}
+
+/* ===============================
+   LEGACY CART COUNT
+================================ */
+.cart-count {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: #d41616;
+  color: white;
+  font-size: 11px;
+  font-weight: 600;
+  border-radius: 10px;
+  min-width: 18px;
+  height: 18px;
+  padding: 0 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid white;
+}
+
+/* ===============================
+   NAVBAR ON SCROLL
+================================ */
+.navbar-shrink {
+  min-height: 60px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+}
+
+.navbar-shrink .brand-logo {
+  height: 38px;
+  width: 38px;
+}
+
+.navbar-shrink .brand-title {
+  font-size: 20px;
+}
+
+/* ===============================
+   MOBILE TOGGLE - MODERN HAMBURGER ICON
+================================ */
+.custom-navbar-toggle {
+  background: none !important;
+  border: none !important;
+  padding: 0.5rem;
+  border-radius: 8px;
+  transition: all 0.2s ease;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  cursor: pointer;
+  box-shadow: none !important;
+}
+
+.custom-navbar-toggle:hover {
+  background: rgba(212, 22, 22, 0.08) !important;
+}
+
+.custom-navbar-toggle:focus,
+.custom-navbar-toggle:focus-visible,
+.custom-navbar-toggle:active,
+.custom-navbar-toggle.active {
+  outline: none !important;
+  background: none !important;
+  box-shadow: none !important;
+  border: none !important;
+}
+
+.custom-navbar-toggle:active {
+  transform: scale(0.95);
+}
+
+/* Remove Bootstrap's default focus styles */
+.navbar-toggler:focus {
+  box-shadow: none !important;
+  outline: none !important;
+}
+
+/* Modern hamburger icon using SVG background */
+.navbar-toggler-icon {
+  width: 24px;
+  height: 24px;
+  position: relative;
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%231a1a1a' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cline x1='3' y1='6' x2='21' y2='6'/%3e%3cline x1='3' y1='12' x2='21' y2='12'/%3e%3cline x1='3' y1='18' x2='21' y2='18'/%3e%3c/svg%3e") !important;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100%;
+  transition: all 0.25s ease;
+}
+
+/* X icon when menu is open */
+.custom-navbar-toggle[aria-expanded="true"] .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23d41616' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cline x1='18' y1='6' x2='6' y2='18'/%3e%3cline x1='6' y1='6' x2='18' y2='18'/%3e%3c/svg%3e") !important;
+  transform: rotate(90deg);
+}
+
+/* ===============================
+   GLOBAL LINK RESET
+================================ */
+a,
+a:link,
+a:visited,
+a:hover,
+a:focus,
+a:active {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* ===============================
+   LAYOUT
+================================ */
+html,
+body,
+#root {
+  height: 100%;
+  overflow-x: hidden;
+}
+
+body {
+  padding-top: 70px;
+  background: #fafafa;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+.page-wrapper {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.page-content {
+  flex: 1;
+  padding-top: 2rem;
+}
+
+/* ===============================
+   RESPONSIVE - FIXED MOBILE MENU
+================================ */
+@media (max-width: 991px) {
+  .header-navbar {
+    background: linear-gradient(
+      145deg,
+      #9cd1fda2,
+      #ecbdb7bd,
+      #f08cb2d2,
+      #9cd1fda2
+    );
+    backdrop-filter: blur(10px);
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+  }
+
+  .navbar-collapse {
+    background: transparent;
+    margin-top: 1rem;
+    padding: 1rem;
+    border-radius: 12px;
+    box-shadow: none;
+  }
+
+  .header-nav {
+    margin-top: 0;
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .nav-link-custom {
+    padding: 0.875rem 1rem !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 8px;
+    margin-bottom: 0.25rem;
+  }
+
+  .nav-link-custom:last-child {
+    border-bottom: none;
+  }
+
+  .nav-link-custom::after {
+    display: none;
+  }
+
+  .nav-link-custom:hover,
+  .nav-link-custom.active {
+    background: rgba(255, 255, 255, 0.2);
+  }
+
+  .header-actions {
+    margin-top: 1rem;
+    padding-top: 1rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.3);
+    justify-content: center;
+    gap: 1.25rem;
+  }
+
+  .navbar {
+    padding: 0.75rem 1rem;
+  }
+
+  /* Clean toggle button */
+  .custom-navbar-toggle {
+    background: none;
+  }
+  
+  .custom-navbar-toggle:hover {
+    background: rgba(212, 22, 22, 0.08);
+  }
+}
+
+@media (max-width: 576px) {
+  .brand-title {
+    font-size: 20px;
+  }
+
+  .brand-logo {
+    height: 50px;
+    width: 50px;
+  }
+  
+  .header-actions {
+    gap: 1rem;
+  }
+  
+  .nav-link-custom {
+    font-size: 0.85rem;
+    padding: 0.75rem 0.875rem !important;
+  }
+  
+  /* Adjust watermark size for mobile */
+  .home-bg::before,
+  .about-bg::before,
+  .account-bg::before,
+  .store-bg::before {
+    background-size: 300px auto;
+  }
+
+  /* Smaller navbar */
+  .navbar {
+    min-height: 60px;
+    padding: 0.5rem 0.875rem;
+  }
+
+  .navbar-collapse {
+    margin-top: 0.75rem;
+    padding: 0.875rem;
+  }
+}
+
+/* ===============================
+   IMPROVED HAMBURGER ICON - REMOVED
+================================ */
+/* Styles moved to MOBILE TOGGLE section above */
+
+/* Smooth collapse animation */
+.navbar-collapse {
+  transition: all 0.3s ease-in-out;
+}
+
+.navbar-collapse.show,
+.navbar-collapse.collapsing {
+  animation: slideDown 0.3s ease-out;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

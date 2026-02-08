@@ -1,0 +1,610 @@
+/* ===============================
+   WELCOME CARD - MODERN GLASSMORPHISM
+================================ */
+.welcome-card {
+  background:  linear-gradient(
+    135deg,
+    rgba(156, 209, 253, 0.486),
+    rgba(236, 189, 183, 0.411),
+    rgba(240, 140, 178, 0.308),
+    rgba(156, 209, 253, 0.253)
+  );
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  border-radius: 24px;
+  overflow: hidden;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 
+    0 8px 32px rgba(212, 22, 22, 0.1),
+    0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.welcome-card:hover {
+  transform: translateY(-8px) scale(1.01);
+  box-shadow: 
+    0 20px 48px rgba(212, 22, 22, 0.15),
+    0 8px 16px rgba(0, 0, 0, 0.08) !important;
+  border-color: rgba(212, 22, 22, 0.3);
+}
+
+.welcome-card .btn {
+  padding: 14px 32px;
+  border-radius: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(212, 22, 22, 0.2);
+}
+
+.welcome-card .btn::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.3);
+  transform: translate(-50%, -50%);
+  transition: width 0.6s, height 0.6s;
+}
+
+.welcome-card .btn:hover::before {
+  width: 300px;
+  height: 300px;
+}
+
+.welcome-card .btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(212, 22, 22, 0.35);
+}
+
+/* ===============================
+   BRAND LINK IN WELCOME TITLE
+================================ */
+.brand-link-home {
+  color: #b32424;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  background: linear-gradient(145deg, #d41616, #e46b6b, #ec7f7f, #d41616);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  position: relative;
+  display: inline-block;
+}
+
+.brand-link-home::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  transition: width 0.3s ease;
+}
+
+.brand-link-home:hover::after {
+  width: 100%;
+}
+
+.brand-link-home:hover {
+  filter: brightness(1.2);
+  transform: scale(1.05);
+}
+
+/* ===============================
+   PRODUCT CAROUSEL - MODERN DESIGN
+================================ */
+.section-header h2 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+  font-weight: 800;
+  background: linear-gradient(135deg, #d41616, #ff4d4d);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.section-header p {
+  font-size: 1.15rem;
+  color: #666;
+  font-weight: 500;
+}
+
+.product-carousel {
+  border-radius: 24px;
+  overflow: hidden;
+  box-shadow: 
+    0 20px 60px rgba(0, 0, 0, 0.12),
+    0 8px 24px rgba(0, 0, 0, 0.08);
+  position: relative;
+}
+
+.product-carousel::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    135deg,
+    rgba(212, 22, 22, 0.03),
+    rgba(255, 77, 77, 0.03)
+  );
+  pointer-events: none;
+  z-index: 1;
+}
+
+.carousel-item-wrapper {
+  position: relative;
+  height: 550px;
+  background: linear-gradient(
+    135deg,
+    rgba(156, 209, 253, 0.08),
+    rgba(236, 189, 183, 0.08),
+    rgba(240, 140, 178, 0.08)
+  );
+}
+
+.carousel-image-container {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 50px;
+  position: relative;
+}
+
+.carousel-image-container::before {
+  content: '';
+  position: absolute;
+  width: 80%;
+  height: 80%;
+  background: radial-gradient(
+    circle,
+    rgba(212, 22, 22, 0.05) 0%,
+    transparent 70%
+  );
+  filter: blur(40px);
+  animation: pulse 3s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 0.5; transform: scale(1); }
+  50% { opacity: 0.8; transform: scale(1.1); }
+}
+
+.carousel-product-image {
+  max-height: 100%;
+  max-width: 100%;
+  object-fit: contain;
+  border-radius: 16px;
+  box-shadow: 
+    0 12px 40px rgba(0, 0, 0, 0.2),
+    0 4px 12px rgba(0, 0, 0, 0.15);
+  transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  z-index: 2;
+}
+
+.carousel-item.active .carousel-product-image {
+  animation: zoomIn 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@keyframes zoomIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.carousel-custom-caption {
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.85) 0%,
+    rgba(0, 0, 0, 0.5) 60%,
+    transparent 100%
+  );
+  backdrop-filter: blur(8px);
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 20px 20px 15px;
+  z-index: 3;
+}
+
+.caption-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+.caption-content h3 {
+  font-size: 1.4rem;
+  font-weight: 800;
+  margin-bottom: 0;
+  text-shadow: 
+    2px 2px 8px rgba(0, 0, 0, 0.6),
+    0 0 20px rgba(212, 22, 22, 0.3);
+  letter-spacing: -0.5px;
+}
+
+.price-tag {
+  font-size: 1.2rem;
+  font-weight: 800;
+  background: linear-gradient(135deg, #ffd700, #ffed4e);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 0;
+  text-shadow: 0 2px 8px rgba(255, 215, 0, 0.4);
+  display: inline-block;
+}
+
+.caption-content .btn {
+  font-size: 0.85rem;
+  padding: 8px 16px;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+  opacity: 0.8;
+  transition: opacity 0.3s ease;
+}
+
+.carousel-control-prev:hover,
+.carousel-control-next:hover {
+  opacity: 1;
+}
+
+.carousel-control-prev:focus,
+.carousel-control-next:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-color: transparent;
+  background-size: 100%;
+  width: 40px;
+  height: 40px;
+  transition: all 0.3s ease;
+  filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.3));
+}
+
+.carousel-control-prev-icon {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='15 18 9 12 15 6'%3e%3c/polyline%3e%3c/svg%3e") !important;
+}
+
+.carousel-control-next-icon {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='9 18 15 12 9 6'%3e%3c/polyline%3e%3c/svg%3e") !important;
+}
+
+.carousel-control-prev:hover .carousel-control-prev-icon,
+.carousel-control-next:hover .carousel-control-next-icon {
+  transform: scale(1.2);
+  filter: drop-shadow(0 4px 12px rgba(212, 22, 22, 0.6));
+}
+
+.carousel-indicators {
+  display: none;
+}
+
+/* ===============================
+   ABOUT TOHFA CARD - ELEVATED DESIGN
+================================ */
+.about-tohfa-card {
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.3),
+    rgba(255, 250, 250, 0.2)
+  );
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  border-radius: 28px;
+  overflow: hidden;
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 
+    0 12px 40px rgba(212, 22, 22, 0),
+    0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.about-tohfa-card:hover {
+  transform: translateY(-12px);
+  box-shadow: 
+    0 24px 60px rgba(212, 22, 22, 0.15),
+    0 8px 20px rgba(0, 0, 0, 0.08) !important;
+  border-color: rgba(212, 22, 22, 0.3);
+}
+
+.about-image-wrapper {
+  height: 100%;
+  min-height: 450px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 50px;
+  background: linear-gradient(
+    135deg,
+    rgba(156, 209, 253, 0.12),
+    rgba(236, 189, 183, 0.12)
+  );
+  position: relative;
+  overflow: hidden;
+}
+
+.about-image-wrapper::before {
+  content: '';
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  background: radial-gradient(
+    circle,
+    rgba(212, 22, 22, 0.1) 0%,
+    transparent 70%
+  );
+  filter: blur(60px);
+  animation: float 6s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  33% { transform: translate(30px, -30px) scale(1.1); }
+  66% { transform: translate(-30px, 30px) scale(0.9); }
+}
+
+.about-image {
+  max-width: 100%;
+  height: auto;
+  max-height: 380px;
+  object-fit: contain;
+  filter: drop-shadow(0 8px 24px rgba(0, 0, 0, 0.15));
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  z-index: 2;
+}
+
+.about-image:hover {
+  transform: scale(1.08) rotate(2deg);
+  filter: drop-shadow(0 12px 32px rgba(212, 22, 22, 0.3));
+}
+
+.about-icon {
+  display: inline-block;
+  padding: 18px;
+  background: linear-gradient(
+    135deg,
+    rgba(212, 22, 22, 0.12),
+    rgba(255, 77, 77, 0.08)
+  );
+  border-radius: 18px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(212, 22, 22, 0.15);
+}
+
+.about-icon:hover {
+  transform: scale(1.1) rotate(5deg);
+  box-shadow: 0 6px 20px rgba(212, 22, 22, 0.25);
+}
+
+/* ===============================
+   CATEGORY CARDS - MODERN & DYNAMIC
+================================ */
+.category-card {
+  border: none;
+  border-radius: 20px;
+  overflow: hidden;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.9),
+    rgba(255, 250, 250, 0.85)
+  );
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  box-shadow: 
+    0 8px 24px rgba(0, 0, 0, 0.08),
+    0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+.category-card:hover {
+  transform: translateY(-16px) scale(1.02);
+  box-shadow: 
+    0 20px 50px rgba(212, 22, 22, 0.15),
+    0 8px 20px rgba(0, 0, 0, 0.1) !important;
+  border-color: rgba(212, 22, 22, 0.3);
+}
+
+.category-image-wrapper {
+  height: 320px;
+  overflow: hidden;
+  background: linear-gradient(
+    135deg,
+    rgba(156, 209, 253, 0.08),
+    rgba(236, 189, 183, 0.08)
+  );
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 30px;
+  position: relative;
+}
+
+.category-image-wrapper::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(
+    circle at center,
+    rgba(212, 22, 22, 0.05) 0%,
+    transparent 70%
+  );
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.category-card:hover .category-image-wrapper::before {
+  opacity: 1;
+}
+
+.category-image {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+  filter: drop-shadow(0 4px 12px rgba(0, 0, 0, 0.1));
+}
+
+.category-card:hover .category-image {
+  transform: scale(1.15) rotate(3deg);
+  filter: drop-shadow(0 8px 20px rgba(212, 22, 22, 0.2));
+}
+
+.category-card h3 {
+  font-size: 1.6rem;
+  font-weight: 800;
+  background: linear-gradient(135deg, #1a1a1a, #333);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-family: 'FMBoylar sans pro', sans-serif;
+  letter-spacing: -0.5px;
+}
+
+.category-card .btn {
+  border-radius: 12px;
+  padding: 12px 28px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  border: 2px solid #d41616;
+  position: relative;
+  overflow: hidden;
+}
+
+.category-card .btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.3),
+    transparent
+  );
+  transition: left 0.5s ease;
+}
+
+.category-card .btn:hover::before {
+  left: 100%;
+}
+
+.category-card .btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(212, 22, 22, 0.3);
+  background: #d41616;
+  color: white;
+}
+
+/* ===============================
+   RESPONSIVE - MODERN BREAKPOINTS
+================================ */
+@media (max-width: 768px) {
+  .carousel-item-wrapper {
+    height: 450px;
+  }
+
+  .carousel-image-container {
+    padding: 30px;
+  }
+
+  .caption-content h3 {
+    font-size: 1.5rem;
+  }
+
+  .price-tag {
+    font-size: 1.3rem;
+  }
+
+  .about-image-wrapper {
+    min-height: 350px;
+    padding: 40px;
+  }
+
+  .about-image {
+    max-height: 280px;
+  }
+
+  .about-tohfa-card .card-body {
+    padding: 2.5rem !important;
+  }
+
+  .category-image-wrapper {
+    height: 260px;
+  }
+
+  .section-header h2 {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .welcome-card .btn {
+    padding: 12px 24px;
+    font-size: 0.85rem;
+  }
+
+  .carousel-item-wrapper {
+    height: 380px;
+  }
+
+  .caption-content h3 {
+    font-size: 1.3rem;
+  }
+
+  .price-tag {
+    font-size: 1.2rem;
+  }
+
+  .about-image-wrapper {
+    min-height: 280px;
+    padding: 25px;
+  }
+
+  .about-image {
+    max-height: 220px;
+  }
+
+  .category-image-wrapper {
+    height: 220px;
+  }
+
+  .category-card h3 {
+    font-size: 1.4rem;
+  }
+
+  .section-header h2 {
+    font-size: 1.8rem;
+  }
+}

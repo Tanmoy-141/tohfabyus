@@ -1,0 +1,238 @@
+.about-title {
+  display: flex;
+  align-items: baseline; /* key fix */
+  gap: 6px;
+}
+
+/* About page links only */
+.about-page a,
+.contact-links a {
+    color: #924242!important;
+    font-weight: 500;
+    margin:5px;
+    display: flex;
+    transition: transform 0.35s ease, opacity 0.35s ease;
+}
+
+.about-highlight {
+  display: flex;
+  align-items: baseline;
+  font-size: 1.5rem;
+  color: #da0808!important;
+
+}
+
+.about-page a:hover,
+.contact-links a:hover {
+    color: #df578b!important;
+    text-decoration: none;
+    transform: scale(1.05);
+  opacity: 0.9;
+}
+
+/* About page layout */
+.about-page {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.about-content {
+    flex: 1;
+}
+
+/* Creators section */
+.creators-section {
+  margin-top: 3rem;
+  text-align: center;
+}
+
+.creators-title {
+  font-family: 'FMBolyar Sans Pro', sans-serif;
+  text-shadow: 1px 1px 1px #dfcccc!important;
+  font-weight: 600;
+  margin-bottom: 2rem;
+  color: #754d3f !important;
+  
+}
+
+/* Grid */
+.creators-grid {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+/* Card */
+.creator-card {
+  max-width: 240px;
+  padding: 1rem;
+}
+
+/* Image */
+.creator-image {
+  width: 220px;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 0.8rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+
+/* Click hint */
+.creator-image.clickable {
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.creator-image.clickable:hover {
+  transform: scale(1.03);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.25);
+}
+
+/* Fullscreen modal */
+.image-modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.85);
+  backdrop-filter: blur(4px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+}
+
+/* Full image */
+.modal-image {
+  max-width: 90%;
+  max-height: 90%;
+  border-radius: 10px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.6);
+  animation: zoomIn 0.3s ease;
+}
+
+/* Close button */
+.modal-close {
+  position: absolute;
+  top: 25px;
+  right: 30px;
+  font-size: 2.5rem;
+  color: #fff!important;
+  cursor: pointer;
+  user-select: none;
+}
+.modal-close:hover {
+  opacity: 0.7;
+}
+
+/* Animation */
+@keyframes zoomIn {
+  from {
+    transform: scale(0.85);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+
+/* Name */
+.creator-name {
+  font-family: 'FMBolyar Sans Pro', sans-serif;
+  font-weight: 600;
+  margin-bottom: 1.0rem;
+  color: #924242!important;
+  text-align: center;
+   transition: transform 0.55s ease, opacity 0.35s ease, color 0.35s ease;
+}
+
+.creator-name a {
+  display: inline-block;   /* override flex */
+  justify-content: center;
+  text-align: center;
+}
+
+.creator-name a:hover {
+ transform: scale(1.05);
+  opacity: 0.92;
+}
+
+/* Quote */
+.creator-quote {
+  font-size: 0.9rem;
+  font-style: italic;
+  color: #a52727!important;
+  line-height: 1.4;
+}
+
+.icon-box {
+    width: 30px;
+    height: 30px;
+    margin: 0px;
+    border-radius: 30%;
+    background: #f5c9c9;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
+    transition: background 0.3s ease, transform 0.3s ease;
+     background: #c78686;
+    transform: translateY(-2px);
+     border-radius: 42%;
+}
+
+.icon-box:hover {
+   transform: scale(1.08);
+  opacity: 0.9;
+}
+
+
+.social-links {
+  display: flex;
+  gap: 1px;
+}
+
+.social-item svg {
+  color: #ffffff;
+  transition: color 0.3s ease;
+}
+
+
+.social-item[aria-label="Facebook"]:hover .icon-box {
+  background:linear-gradient(
+     45deg,
+   #1b76ee,
+   #8fb2e0,
+   #2a09e2,
+   #3687f0
+  );
+}
+
+.social-item[aria-label="Instagram"]:hover .icon-box {
+  background: linear-gradient(
+    45deg,
+    #feda75,
+    #fa7e1e,
+    #d62976,
+    #962fbf,
+    #4f5bd5
+  );
+}
+
+.follow-text {
+    font-size: 1rem;
+    font-weight: 600;
+    margin: 0px;
+    color: #000000;
+}
+
+.follow-us {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
