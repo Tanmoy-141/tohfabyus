@@ -6,7 +6,7 @@ import { useWishlist } from "../context/WishlistContext";
 import { useCart } from "../context/CartContext";
 import { useOrders } from "../context/OrdersContext";
 import { formatCurrency } from "../utilities/formatCurrency";
-import "./ProductDetails.css";
+import "./Productdetails.css";
 
 type StoreItemType = {
   id: string;
