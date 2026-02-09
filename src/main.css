@@ -450,7 +450,7 @@ body {
 }
 
 /* ===============================
-   RESPONSIVE - FIXED MOBILE MENU
+   RESPONSIVE - MOBILE MENU OVERLAY
 ================================ */
 @media (max-width: 991px) {
   .header-navbar {
@@ -465,12 +465,27 @@ body {
     box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
   }
 
+  /* CRITICAL: Make menu overlay instead of pushing content */
   .navbar-collapse {
-    background: transparent;
-    margin-top: 1rem;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: linear-gradient(
+      145deg,
+      #9cd1fdfa,
+      #ecbdb7fa,
+      #f08cb2fa,
+      #9cd1fdfa
+    );
+    backdrop-filter: blur(12px);
+    margin-top: 0;
     padding: 1rem;
-    border-radius: 12px;
-    box-shadow: none;
+    border-radius: 0 0 12px 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+    max-height: calc(100vh - 70px);
+    overflow-y: auto;
+    z-index: 999;
   }
 
   .header-nav {
@@ -519,6 +534,11 @@ body {
   .custom-navbar-toggle:hover {
     background: rgba(212, 22, 22, 0.08);
   }
+
+  /* Prevent body scroll when menu is open */
+  body.menu-open {
+    overflow: hidden;
+  }
 }
 
 @media (max-width: 576px) {
@@ -555,23 +575,22 @@ body {
   }
 
   .navbar-collapse {
-    margin-top: 0.75rem;
+    margin-top: 0;
     padding: 0.875rem;
+    max-height: calc(100vh - 60px);
   }
 }
-
-/* ===============================
-   IMPROVED HAMBURGER ICON - REMOVED
-================================ */
-/* Styles moved to MOBILE TOGGLE section above */
 
 /* Smooth collapse animation */
 .navbar-collapse {
   transition: all 0.3s ease-in-out;
 }
 
-.navbar-collapse.show,
 .navbar-collapse.collapsing {
+  transition: height 0.3s ease;
+}
+
+.navbar-collapse.show {
   animation: slideDown 0.3s ease-out;
 }
 
