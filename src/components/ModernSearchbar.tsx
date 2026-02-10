@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
 import { useNavigate } from "react-router-dom";
-import { useSearch } from "../context/SearchContext";
+import { useSearch } from "../context/useSearch";
 import "./ModernSearchbar.css";
 
 export function ModernSearchBar() {
@@ -102,7 +102,9 @@ export function ModernSearchBar() {
                     className="search-result-item"
                     onClick={() => handleResultClick(result.path)}>
                     <div className="search-result-icon">
-                      {result.type === "product" && "🎁"}
+                      {result.type === "product" && "imgurl" in result && (
+                        <img src={result.imgurl as string} alt={result.title} />
+                      )}
                       {result.type === "category" && "📁"}
                       {result.type === "page" && "📄"}
                     </div>

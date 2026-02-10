@@ -2,7 +2,7 @@ import { Card, Button } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import { useWishlist } from "../context/WishlistContext";
 import { useCart } from "../context/CartContext";
-import { useOrders } from "../context/OrdersContext";
+import { useOrders } from "../hooks/useOrders";
 import { formatCurrency } from "../utilities/formatCurrency";
 import { useState } from "react";
 
@@ -43,15 +43,17 @@ export function StoreItem({
 
   const handlePlaceOrder = (e: React.MouseEvent) => {
     e.preventDefault();
-    placeOrder([{ id, name, price, quantity, imgUrl }], price * quantity);
+    placeOrder([{ id, name, price, quantity, imgUrl }]);
     setQuantity(1);
   };
 
   const handleWishlistToggle = (e: React.MouseEvent) => {
     e.preventDefault();
-    wishlisted
-      ? removeFromWishlist(id)
-      : addToWishlist({ id, name, price, imgUrl });
+    if (wishlisted) {
+      removeFromWishlist(id);
+    } else {
+      addToWishlist({ id, name, price, imgUrl });
+    }
   };
 
   const categoryClass =

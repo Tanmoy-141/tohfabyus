@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 import { useCart } from "../context/CartContext";
 import { formatCurrency } from "../utilities/formatCurrency";
 import "./cart.css";
-import { useOrders } from "../context/OrdersContext";
+import { useOrders } from "../hooks/useOrders";
 
 export function Cart() {
   const {
@@ -135,7 +135,7 @@ export function Cart() {
                 className="checkout-btn"
                 disabled={cartCount === 0}
                 onClick={() => {
-                  placeOrder(cartItems, GRAND_TOTAL);
+                  placeOrder(cartItems);
                   navigate("/account");
                 }}>
                 Proceed to Checkout

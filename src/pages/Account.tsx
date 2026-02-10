@@ -1,23 +1,24 @@
 import { Button } from "react-bootstrap";
-import { useAuth } from "../context/AuthContext";
+import { useAuth } from "../hooks/useAuth";
 import { Navigate } from "react-router-dom";
 import { useState } from "react";
 import "./account.css";
 import { Orders } from "../components/Orders";
 
 export function Account() {
-  /* ===============================
-     HOOKS — MUST BE AT TOP
-  ================================ */
-  const { user, isLoggedIn, logout } = useAuth();
+  const { user, logout } = useAuth();
   const [tab, setTab] = useState("profile");
 
-  /* ===============================
-     AUTH GUARD
-  ================================ */
-  if (!isLoggedIn || !user) {
+  // ✅ Auth guard
+  if (!user) {
     return <Navigate to="/login" />;
   }
+
+  // ✅ Safe fallback name
+  const displayName =
+    user.displayName || user.username || user.email || user.phone || "User";
+
+  const avatarLetter = displayName.charAt(0).toUpperCase();
 
   return (
     <>
@@ -65,29 +66,41 @@ export function Account() {
             {tab === "profile" && (
               <>
                 <div className="profile-header">
-                  <div className="avatar">
-                    {user.name.charAt(0).toUpperCase()}
-                  </div>
+                  <div className="avatar">{avatarLetter}</div>
                   <div>
-                    <h4>{user.name}</h4>
-                    <p className="text-muted">{user.email}</p>
+                    <h4>{displayName}</h4>
+                    <p className="text-muted">
+                      {user.email || user.phone || user.username}
+                    </p>
                   </div>
                 </div>
 
                 <div className="profile-info">
                   <div>
                     <label>Full Name :</label>
-                    <span> {user.name}</span>
+                    <span> {displayName}</span>
                   </div>
 
-                  <div>
-                    <label>Email :</label>
-                    <span> {user.email}</span>
-                  </div>
+                  {user.email && (
+                    <div>
+                      <label>Email :</label>
+                      <span> {user.email}</span>
+                    </div>
+                  )}
+
+                  {user.phone && (
+                    <div>
+                      <label>Phone :</label>
+                      <span> {user.phone}</span>
+                    </div>
+                  )}
 
                   <div>
                     <label>Member Since :</label>
-                    <span> {user.memberSince}</span>
+                    <span>
+                      {" "}
+                      {new Date(user.createdAt).toLocaleDateString()}
+                    </span>
                   </div>
                 </div>
               </>

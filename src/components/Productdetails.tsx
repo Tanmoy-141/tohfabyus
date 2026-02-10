@@ -4,7 +4,7 @@ import { useState } from "react";
 import rawItems from "../data/items.json";
 import { useWishlist } from "../context/WishlistContext";
 import { useCart } from "../context/CartContext";
-import { useOrders } from "../context/OrdersContext";
+import { useOrders } from "../hooks/useOrders";
 import { formatCurrency } from "../utilities/formatCurrency";
 import "./Productdetails.css";
 
@@ -57,18 +57,15 @@ export function ProductDetails() {
   };
 
   const handlePlaceOrder = () => {
-    placeOrder(
-      [
-        {
-          id: product.id,
-          name: product.name,
-          price: product.price,
-          quantity,
-          imgUrl: product.imgUrl,
-        },
-      ],
-      product.price * quantity,
-    );
+    placeOrder([
+      {
+        id: product.id,
+        name: product.name,
+        price: product.price,
+        quantity,
+        imgUrl: product.imgUrl,
+      },
+    ]);
     setQuantity(1);
   };
 

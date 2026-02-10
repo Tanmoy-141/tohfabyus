@@ -13,49 +13,51 @@ import { Account } from "./pages/Account.tsx";
 import { Login } from "./pages/Login.tsx";
 import { Signup } from "./pages/Signup.tsx";
 import { ProtectedRoute } from "./context/ProtectedRoute.tsx";
-import { AuthProvider } from "./context/AuthContext";
+import { AuthProvider } from "./context/AuthProvider.tsx";
 import { WishlistProvider } from "./context/WishlistContext";
 import { CartProvider } from "./context/CartContext";
-import { OrdersProvider } from "./context/OrdersContext";
-import { SearchProvider } from "./context/SearchContext";
+import { SearchProvider } from "./components/SearchProvider.tsx";
+import { OrdersProvider } from "./context/orderProvider.tsx";
 
 function App() {
   return (
     <AuthProvider>
-      <WishlistProvider>
-        <SearchProvider>
-          <CartProvider>
-            <OrdersProvider>
-              <div className="app-root">
-                <Header />
-                <Container className="mb-4 flex-fill">
-                  <Routes>
-                    <Route path="/" element={<Home />} />
-                    <Route path="/gift-items" element={<GiftItems />} />
-                    <Route path="/home-decor" element={<HomeDecor />} />
-                    <Route path="/accessories" element={<Accessories />} />
-                    {/* Product Details Route */}
-                    <Route path="/product/:id" element={<ProductDetails />} />
-                    <Route path="/wishlist" element={<Wishlist />} />
-                    <Route path="/cart" element={<Cart />} />
-                    <Route path="/aboutus" element={<AboutUs />} />
-                    <Route path="/login" element={<Login />} />
-                    <Route path="/signup" element={<Signup />} />
-                    <Route
-                      path="/account"
-                      element={
-                        <ProtectedRoute>
-                          <Account />
-                        </ProtectedRoute>
-                      }
-                    />
-                  </Routes>
-                </Container>
-              </div>
-            </OrdersProvider>
-          </CartProvider>
-        </SearchProvider>
-      </WishlistProvider>
+      <OrdersProvider>
+        <WishlistProvider>
+          <SearchProvider>
+            <CartProvider>
+              <OrdersProvider>
+                <div className="app-root">
+                  <Header />
+                  <Container className="mb-4 flex-fill">
+                    <Routes>
+                      <Route path="/" element={<Home />} />
+                      <Route path="/gift-items" element={<GiftItems />} />
+                      <Route path="/home-decor" element={<HomeDecor />} />
+                      <Route path="/accessories" element={<Accessories />} />
+                      {/* Product Details Route */}
+                      <Route path="/product/:id" element={<ProductDetails />} />
+                      <Route path="/wishlist" element={<Wishlist />} />
+                      <Route path="/cart" element={<Cart />} />
+                      <Route path="/aboutus" element={<AboutUs />} />
+                      <Route path="/login" element={<Login />} />
+                      <Route path="/signup" element={<Signup />} />
+                      <Route
+                        path="/account"
+                        element={
+                          <ProtectedRoute>
+                            <Account />
+                          </ProtectedRoute>
+                        }
+                      />
+                    </Routes>
+                  </Container>
+                </div>
+              </OrdersProvider>
+            </CartProvider>
+          </SearchProvider>
+        </WishlistProvider>
+      </OrdersProvider>
     </AuthProvider>
   );
 }

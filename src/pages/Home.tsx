@@ -37,7 +37,7 @@ export function Home() {
               </p>
               <div className="d-flex gap-3 justify-content-center flex-wrap">
                 <Button
-                  as={Link as any}
+                  as={Link as any} // eslint-disable-line @typescript-eslint/no-explicit-any
                   to="/gift-items"
                   variant="outline-danger"
                   size="sm">
@@ -45,7 +45,7 @@ export function Home() {
                   Explore Gifts
                 </Button>
                 <Button
-                  as={Link as any}
+                  as={Link as any} // eslint-disable-line @typescript-eslint/no-explicit-any
                   to="/home-decor"
                   variant="outline-danger"
                   size="sm">
@@ -53,7 +53,7 @@ export function Home() {
                   Revamp Home
                 </Button>
                 <Button
-                  as={Link as any}
+                  as={Link as any} // eslint-disable-line @typescript-eslint/no-explicit-any
                   to="/accessories"
                   variant="outline-danger"
                   size="sm">
@@ -94,7 +94,7 @@ export function Home() {
                       <h3>{item.name}</h3>
                       <p className="price-tag">₹{item.price.toFixed(2)}</p>
                       <Button
-                        as={Link as any}
+                        as={Link as any} // eslint-disable-line @typescript-eslint/no-explicit-any
                         to={`/${item.category.toLowerCase().replace(/ /g, "-")}`}
                         variant="outline-light"
                         size="sm"
@@ -140,7 +140,7 @@ export function Home() {
                     create memories.
                   </p>
                   <Button
-                    as={Link as any}
+                    as={Link as any} // eslint-disable-line @typescript-eslint/no-explicit-any
                     to="/aboutus"
                     variant="danger"
                     size="lg"
@@ -176,7 +176,7 @@ export function Home() {
                     Thoughtful presents for loved ones
                   </p>
                   <Button
-                    as={Link as any}
+                    as={Link as any} // eslint-disable-line @typescript-eslint/no-explicit-any
                     to="/gift-items"
                     variant="outline-danger">
                     Explore Gifts
@@ -198,7 +198,7 @@ export function Home() {
                   <h3 className="mb-3">Home Decor</h3>
                   <p className="home-text mb-3">Transform your living spaces</p>
                   <Button
-                    as={Link as any}
+                    as={Link as any} // eslint-disable-line @typescript-eslint/no-explicit-any
                     to="/home-decor"
                     variant="outline-danger">
                     Explore Decor
@@ -220,7 +220,7 @@ export function Home() {
                   <h3 className="mb-3">Accessories</h3>
                   <p className="home-text mb-3">Complete your perfect look</p>
                   <Button
-                    as={Link as any}
+                    as={Link as any} // eslint-disable-line @typescript-eslint/no-explicit-any
                     to="/accessories"
                     variant="outline-danger">
                     Explore Accessories

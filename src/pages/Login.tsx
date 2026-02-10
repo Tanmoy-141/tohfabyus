@@ -2,19 +2,19 @@ import { Container, Form, Button, Alert } from "react-bootstrap";
 import { useNavigate, Link } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { Eye, EyeOff, Mail, Lock } from "lucide-react";
-import { useAuth } from "../context/AuthContext";
+import { useAuth } from "../hooks/useAuth";
 import "./Login.css";
 
 export function Login() {
-  const { login, isLoggedIn } = useAuth();
+  const { login, user } = useAuth(); // ✅ changed
 
   const navigate = useNavigate();
 
   useEffect(() => {
-    if (isLoggedIn) {
-      navigate("/account");
+    if (user) {
+      navigate("/account"); // ✅ user means logged in
     }
-  }, [isLoggedIn, navigate]);
+  }, [user, navigate]);
 
   const [identifier, setIdentifier] = useState<string>("");
   const [password, setPassword] = useState<string>("");
@@ -41,12 +41,13 @@ export function Login() {
 
     setIsLoading(true);
 
-    // Simulate API call delay
-    setTimeout(() => {
-      login(identifier);
-
+    try {
+      await login(identifier); // ✅ await login (important)
+    } catch (err) {
+      setError(err instanceof Error ? err.message : "Login failed");
+    } finally {
       setIsLoading(false);
-    }, 800);
+    }
   };
 
   return (

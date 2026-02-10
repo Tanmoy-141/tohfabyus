@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { useOrders } from "../context/OrdersContext";
+import { useOrders } from "../hooks/useOrders";
 
 import "./orders.css";
 
