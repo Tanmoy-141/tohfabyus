@@ -77,26 +77,26 @@ export function Account() {
 
                 <div className="profile-info">
                   <div>
-                    <label>Full Name :</label>
+                    <strong>Full Name :</strong>
                     <span> {displayName}</span>
                   </div>
 
                   {user.email && (
                     <div>
-                      <label>Email :</label>
+                      <strong>Email :</strong>
                       <span> {user.email}</span>
                     </div>
                   )}
 
                   {user.phone && (
                     <div>
-                      <label>Phone :</label>
+                      <strong>Phone :</strong>
                       <span> {user.phone}</span>
                     </div>
                   )}
 
                   <div>
-                    <label>Member Since :</label>
+                    <strong>Member Since :</strong>
                     <span>
                       {" "}
                       {new Date(user.createdAt).toLocaleDateString()}
