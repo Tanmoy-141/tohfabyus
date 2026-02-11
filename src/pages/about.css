@@ -7,38 +7,39 @@
 /* About page links only */
 .about-page a,
 .contact-links a {
-    color: #924242!important;
-    font-weight: 500;
-    margin:5px;
-    display: flex;
-    transition: transform 0.35s ease, opacity 0.35s ease;
+  color: #924242 !important;
+  font-weight: 500;
+  margin: 5px;
+  display: flex;
+  transition:
+    transform 0.35s ease,
+    opacity 0.35s ease;
 }
 
 .about-highlight {
   display: flex;
   align-items: baseline;
   font-size: 1.5rem;
-  color: #da0808!important;
-
+  color: #da0808 !important;
 }
 
 .about-page a:hover,
 .contact-links a:hover {
-    color: #df578b!important;
-    text-decoration: none;
-    transform: scale(1.05);
+  color: #df578b !important;
+  text-decoration: none;
+  transform: scale(1.05);
   opacity: 0.9;
 }
 
 /* About page layout */
 .about-page {
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
 .about-content {
-    flex: 1;
+  flex: 1;
 }
 
 /* Creators section */
@@ -48,12 +49,11 @@
 }
 
 .creators-title {
-  font-family: 'FMBolyar Sans Pro', sans-serif;
-  text-shadow: 1px 1px 1px #dfcccc!important;
+  font-family: "FMBolyar Sans Pro", sans-serif;
+  text-shadow: 1px 1px 1px #dfcccc !important;
   font-weight: 600;
   margin-bottom: 2rem;
   color: #754d3f !important;
-  
 }
 
 /* Grid */
@@ -80,7 +80,6 @@
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
 }
 
-
 /* Click hint */
 .creator-image.clickable {
   cursor: pointer;
@@ -89,7 +88,7 @@
 
 .creator-image.clickable:hover {
   transform: scale(1.03);
-  box-shadow: 0 6px 18px rgba(0,0,0,0.25);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.25);
 }
 
 /* Fullscreen modal */
@@ -119,7 +118,7 @@
   top: 25px;
   right: 30px;
   font-size: 2.5rem;
-  color: #fff!important;
+  color: #fff !important;
   cursor: pointer;
   user-select: none;
 }
@@ -139,25 +138,27 @@
   }
 }
 
-
 /* Name */
 .creator-name {
-  font-family: 'FMBolyar Sans Pro', sans-serif;
+  font-family: "FMBolyar Sans Pro", sans-serif;
   font-weight: 600;
-  margin-bottom: 1.0rem;
-  color: #924242!important;
+  margin-bottom: 1rem;
+  color: #924242 !important;
   text-align: center;
-   transition: transform 0.55s ease, opacity 0.35s ease, color 0.35s ease;
+  transition:
+    transform 0.55s ease,
+    opacity 0.35s ease,
+    color 0.35s ease;
 }
 
 .creator-name a {
-  display: inline-block;   /* override flex */
+  display: inline-block; /* override flex */
   justify-content: center;
   text-align: center;
 }
 
 .creator-name a:hover {
- transform: scale(1.05);
+  transform: scale(1.05);
   opacity: 0.92;
 }
 
@@ -165,31 +166,29 @@
 .creator-quote {
   font-size: 0.9rem;
   font-style: italic;
-  color: #a52727!important;
+  color: #a52727 !important;
   line-height: 1.4;
 }
 
 .icon-box {
-    width: 30px;
-    height: 30px;
-    margin: 0px;
-    border-radius: 30%;
-    background: #f5c9c9;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
-    transition: background 0.3s ease, transform 0.3s ease;
-     background: #c78686;
-    transform: translateY(-2px);
-     border-radius: 42%;
+  width: 30px;
+  height: 30px;
+  margin: 0px;
+  border-radius: 42%;
+  background: #c78686; /* keep only ONE background */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
+  transition:
+    background 0.3s ease,
+    transform 0.3s ease;
 }
 
 .icon-box:hover {
-   transform: scale(1.08);
+  transform: scale(1.08);
   opacity: 0.9;
 }
-
 
 .social-links {
   display: flex;
@@ -201,18 +200,11 @@
   transition: color 0.3s ease;
 }
 
-
-.social-item[aria-label="Facebook"]:hover .icon-box {
-  background:linear-gradient(
-     45deg,
-   #1b76ee,
-   #8fb2e0,
-   #2a09e2,
-   #3687f0
-  );
+.social-item.facebook:hover .icon-box {
+  background: linear-gradient(45deg, #1b76ee, #8fb2e0, #2a09e2, #3687f0);
 }
 
-.social-item[aria-label="Instagram"]:hover .icon-box {
+.social-item.instagram:hover .icon-box {
   background: linear-gradient(
     45deg,
     #feda75,
@@ -224,10 +216,10 @@
 }
 
 .follow-text {
-    font-size: 1rem;
-    font-weight: 600;
-    margin: 0px;
-    color: #000000;
+  font-size: 1rem;
+  font-weight: 600;
+  margin: 0px;
+  color: #000000;
 }
 
 .follow-us {
@@ -235,4 +227,3 @@
   align-items: center;
   gap: 12px;
 }
-

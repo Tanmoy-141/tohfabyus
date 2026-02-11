@@ -3,6 +3,7 @@ import { useNavigate, Link } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { Eye, EyeOff, Mail, Lock } from "lucide-react";
 import { useAuth } from "../hooks/useAuth";
+import { Helmet } from "react-helmet-async";
 import "./Login.css";
 
 export function Login() {
@@ -51,82 +52,92 @@ export function Login() {
   };
 
   return (
-    <div className="login-page">
-      <Container className="login-container">
-        <div className="login-card">
-          <h2 className="login-title">Welcome Back</h2>
-          <p className="login-subtitle">Sign in to access your account</p>
+    <>
+      <Helmet>
+        <title>Login | TOHFA BY US</title>
+        <link rel="canonical" href="https://tohfabyus.vercel.app/login" />
+        <meta name="robots" content="noindex, follow" />
+      </Helmet>
 
-          {error && (
-            <Alert
-              variant="danger"
-              dismissible
-              onClose={() => setError("")}
-              className="modern-alert">
-              {error}
-            </Alert>
-          )}
+      <div className="login-page">
+        <Container className="login-container">
+          <div className="login-card">
+            <h2 className="login-title">Welcome Back</h2>
+            <p className="login-subtitle">Sign in to access your account</p>
 
-          <Form onSubmit={handleLogin}>
-            <Form.Group className="mb-3">
-              <div className="input-wrapper">
-                <Mail size={18} className="input-icon" />
-                <Form.Control
-                  type="text"
-                  id="identifier"
-                  name="identifier"
-                  placeholder="Email or mobile number"
-                  value={identifier}
-                  onChange={(e) => setIdentifier(e.target.value)}
-                  required
-                  autoComplete="username"
-                  className="login-input with-icon"
-                />
+            {error && (
+              <Alert
+                variant="danger"
+                dismissible
+                onClose={() => setError("")}
+                className="modern-alert">
+                {error}
+              </Alert>
+            )}
+
+            <Form onSubmit={handleLogin}>
+              <Form.Group className="mb-3">
+                <div className="input-wrapper">
+                  <Mail size={18} className="input-icon" />
+                  <Form.Control
+                    type="text"
+                    id="identifier"
+                    name="identifier"
+                    placeholder="Email or mobile number"
+                    value={identifier}
+                    onChange={(e) => setIdentifier(e.target.value)}
+                    required
+                    autoComplete="username"
+                    className="login-input with-icon"
+                  />
+                </div>
+              </Form.Group>
+
+              <Form.Group className="mb-4">
+                <div className="input-wrapper">
+                  <Lock size={18} className="input-icon" />
+                  <Form.Control
+                    type={showPassword ? "text" : "password"}
+                    id="password"
+                    name="password"
+                    placeholder="Password"
+                    value={password}
+                    onChange={(e) => setPassword(e.target.value)}
+                    required
+                    autoComplete="current-password"
+                    className="login-input with-icon with-toggle"
+                  />
+                  <button
+                    type="button"
+                    onClick={() => setShowPassword(!showPassword)}
+                    className="password-toggle"
+                    aria-label={
+                      showPassword ? "Hide password" : "Show password"
+                    }>
+                    {showPassword ? <EyeOff size={18} /> : <Eye size={18} />}
+                  </button>
+                </div>
+              </Form.Group>
+
+              <div className="forgot-password">
+                <Link to="/forgot-password">Forgot password?</Link>
               </div>
-            </Form.Group>
 
-            <Form.Group className="mb-4">
-              <div className="input-wrapper">
-                <Lock size={18} className="input-icon" />
-                <Form.Control
-                  type={showPassword ? "text" : "password"}
-                  id="password"
-                  name="password"
-                  placeholder="Password"
-                  value={password}
-                  onChange={(e) => setPassword(e.target.value)}
-                  required
-                  autoComplete="current-password"
-                  className="login-input with-icon with-toggle"
-                />
-                <button
-                  type="button"
-                  onClick={() => setShowPassword(!showPassword)}
-                  className="password-toggle"
-                  aria-label={showPassword ? "Hide password" : "Show password"}>
-                  {showPassword ? <EyeOff size={18} /> : <Eye size={18} />}
-                </button>
-              </div>
-            </Form.Group>
+              <Button type="submit" className="login-btn" disabled={isLoading}>
+                {isLoading ? "Signing in..." : "Sign In"}
+              </Button>
+            </Form>
 
-            <div className="forgot-password">
-              <Link to="/forgot-password">Forgot password?</Link>
+            <div className="login-divider">
+              <span>or</span>
             </div>
 
-            <Button type="submit" className="login-btn" disabled={isLoading}>
-              {isLoading ? "Signing in..." : "Sign In"}
-            </Button>
-          </Form>
-
-          <div className="login-divider">
-            <span>or</span>
+            <div className="login-link">
+              Don't have an account? <Link to="/signup">Create one</Link>
+            </div>
           </div>
-
-          <div className="login-link">
-            Don't have an account? <Link to="/signup">Create one</Link>
-          </div>
-        </div>
-      </Container>
-    </div>
+        </Container>
+      </div>
+    </>
   );
 }

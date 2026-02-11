@@ -4,6 +4,7 @@ import { Navigate } from "react-router-dom";
 import { useState } from "react";
 import "./account.css";
 import { Orders } from "../components/Orders";
+import { Helmet } from "react-helmet-async";
 
 export function Account() {
   const { user, logout } = useAuth();
@@ -22,6 +23,12 @@ export function Account() {
 
   return (
     <>
+      <Helmet>
+        <title>My Account | TOHFA BY US</title>
+        <link rel="canonical" href="https://tohfabyus.vercel.app/account" />
+        <meta name="robots" content="noindex, follow" />
+      </Helmet>
+
       <h1 className="mt-5 account-header">Account Summary :</h1>
 
       <div className="account-page">

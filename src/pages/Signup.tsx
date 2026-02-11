@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import { Eye, EyeOff, Mail, Lock, User, Phone } from "lucide-react";
 import { useAuth } from "../hooks/useAuth";
 import "./Login.css";
+import { Helmet } from "react-helmet-async";
 
 export function Signup() {
   const { signup, user } = useAuth();
@@ -85,121 +86,129 @@ export function Signup() {
   };
 
   return (
-    <div className="login-page">
-      <Container className="login-container">
-        <div className="login-card">
-          <h2 className="login-title">Create Account</h2>
-          <p className="login-subtitle">Join us today and start shopping</p>
+    <>
+      <Helmet>
+        <title>Sign Up | TOHFA BY US</title>
+        <link rel="canonical" href="https://tohfabyus.vercel.app/signup" />
+        <meta name="robots" content="noindex, follow" />
+      </Helmet>
 
-          {error && (
-            <Alert
-              variant="danger"
-              dismissible
-              onClose={() => setError("")}
-              className="modern-alert">
-              {error}
-            </Alert>
-          )}
+      <div className="login-page">
+        <Container className="login-container">
+          <div className="login-card">
+            <h2 className="login-title">Create Account</h2>
+            <p className="login-subtitle">Join us today and start shopping</p>
 
-          <Form onSubmit={handleSignup}>
-            {/* Name */}
-            <Form.Group className="mb-3">
-              <div className="input-wrapper">
-                <User size={18} className="input-icon" />
-                <Form.Control
-                  type="text"
-                  name="name"
-                  placeholder="Full name"
-                  value={formData.name}
-                  onChange={handleChange}
-                  required
-                  className="login-input with-icon"
-                />
-              </div>
-            </Form.Group>
+            {error && (
+              <Alert
+                variant="danger"
+                dismissible
+                onClose={() => setError("")}
+                className="modern-alert">
+                {error}
+              </Alert>
+            )}
 
-            {/* Email or Phone */}
-            <Form.Group className="mb-3">
-              <div className="input-wrapper">
-                {identifierType === "phone" ? (
-                  <Phone size={18} className="input-icon" />
-                ) : (
-                  <Mail size={18} className="input-icon" />
-                )}
-                <Form.Control
-                  type="text"
-                  name="identifier"
-                  placeholder="Email or mobile number"
-                  value={formData.identifier}
-                  onChange={handleChange}
-                  required
-                  className="login-input with-icon"
-                />
-              </div>
-            </Form.Group>
+            <Form onSubmit={handleSignup}>
+              {/* Name */}
+              <Form.Group className="mb-3">
+                <div className="input-wrapper">
+                  <User size={18} className="input-icon" />
+                  <Form.Control
+                    type="text"
+                    name="name"
+                    placeholder="Full name"
+                    value={formData.name}
+                    onChange={handleChange}
+                    required
+                    className="login-input with-icon"
+                  />
+                </div>
+              </Form.Group>
 
-            {/* Password */}
-            <Form.Group className="mb-3">
-              <div className="input-wrapper">
-                <Lock size={18} className="input-icon" />
-                <Form.Control
-                  type={showPassword ? "text" : "password"}
-                  name="password"
-                  placeholder="Password"
-                  value={formData.password}
-                  onChange={handleChange}
-                  required
-                  className="login-input with-icon with-toggle"
-                />
-                <button
-                  type="button"
-                  onClick={() => setShowPassword(!showPassword)}
-                  className="password-toggle">
-                  {showPassword ? <EyeOff size={18} /> : <Eye size={18} />}
-                </button>
-              </div>
-            </Form.Group>
-
-            {/* Confirm Password */}
-            <Form.Group className="mb-4">
-              <div className="input-wrapper">
-                <Lock size={18} className="input-icon" />
-                <Form.Control
-                  type={showConfirmPassword ? "text" : "password"}
-                  name="confirmPassword"
-                  placeholder="Confirm password"
-                  value={formData.confirmPassword}
-                  onChange={handleChange}
-                  required
-                  className="login-input with-icon with-toggle"
-                />
-                <button
-                  type="button"
-                  onClick={() => setShowConfirmPassword(!showConfirmPassword)}
-                  className="password-toggle">
-                  {showConfirmPassword ? (
-                    <EyeOff size={18} />
+              {/* Email or Phone */}
+              <Form.Group className="mb-3">
+                <div className="input-wrapper">
+                  {identifierType === "phone" ? (
+                    <Phone size={18} className="input-icon" />
                   ) : (
-                    <Eye size={18} />
+                    <Mail size={18} className="input-icon" />
                   )}
-                </button>
-              </div>
-            </Form.Group>
+                  <Form.Control
+                    type="text"
+                    name="identifier"
+                    placeholder="Email or mobile number"
+                    value={formData.identifier}
+                    onChange={handleChange}
+                    required
+                    className="login-input with-icon"
+                  />
+                </div>
+              </Form.Group>
 
-            <Button type="submit" className="login-btn" disabled={isLoading}>
-              {isLoading ? "Creating Account..." : "Create Account"}
-            </Button>
-          </Form>
+              {/* Password */}
+              <Form.Group className="mb-3">
+                <div className="input-wrapper">
+                  <Lock size={18} className="input-icon" />
+                  <Form.Control
+                    type={showPassword ? "text" : "password"}
+                    name="password"
+                    placeholder="Password"
+                    value={formData.password}
+                    onChange={handleChange}
+                    required
+                    className="login-input with-icon with-toggle"
+                  />
+                  <button
+                    type="button"
+                    onClick={() => setShowPassword(!showPassword)}
+                    className="password-toggle">
+                    {showPassword ? <EyeOff size={18} /> : <Eye size={18} />}
+                  </button>
+                </div>
+              </Form.Group>
 
-          <div className="login-divider">
-            <span>or</span>
+              {/* Confirm Password */}
+              <Form.Group className="mb-4">
+                <div className="input-wrapper">
+                  <Lock size={18} className="input-icon" />
+                  <Form.Control
+                    type={showConfirmPassword ? "text" : "password"}
+                    name="confirmPassword"
+                    placeholder="Confirm password"
+                    value={formData.confirmPassword}
+                    onChange={handleChange}
+                    required
+                    className="login-input with-icon with-toggle"
+                  />
+                  <button
+                    type="button"
+                    onClick={() => setShowConfirmPassword(!showConfirmPassword)}
+                    className="password-toggle">
+                    {showConfirmPassword ? (
+                      <EyeOff size={18} />
+                    ) : (
+                      <Eye size={18} />
+                    )}
+                  </button>
+                </div>
+              </Form.Group>
+
+              <Button type="submit" className="login-btn" disabled={isLoading}>
+                {isLoading ? "Creating Account..." : "Create Account"}
+              </Button>
+            </Form>
+
+            <div className="login-divider">
+              <span>or</span>
+            </div>
+
+            <div className="login-link">
+              Already have an account? <Link to="/login">Sign in</Link>
+            </div>
           </div>
-
-          <div className="login-link">
-            Already have an account? <Link to="/login">Sign in</Link>
-          </div>
-        </div>
-      </Container>
-    </div>
+        </Container>
+      </div>
+    </>
   );
 }

@@ -34,7 +34,7 @@
   background: white;
   border-radius: 24px;
   padding: 40px;
-  box-shadow: 
+  box-shadow:
     0 8px 32px rgba(0, 0, 0, 0.08),
     0 2px 8px rgba(0, 0, 0, 0.04);
   gap: 40px;
@@ -128,7 +128,7 @@
   justify-content: center;
   color: #666;
   font-size: 24px;
-  box-shadow: 
+  box-shadow:
     0 4px 16px rgba(0, 0, 0, 0.1),
     0 2px 4px rgba(0, 0, 0, 0.06);
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
@@ -144,7 +144,7 @@
 .wishlist-btn-detail:hover {
   background: #fff;
   transform: scale(1.15);
-  box-shadow: 
+  box-shadow:
     0 6px 20px rgba(212, 22, 22, 0.2),
     0 2px 8px rgba(0, 0, 0, 0.1);
 }
@@ -249,7 +249,7 @@
 }
 
 .product-features li::before {
-  content: '✓';
+  content: "✓";
   position: absolute;
   left: 0;
   color: #28a745;
@@ -489,4 +489,43 @@
 }
 .description {
   white-space: pre-line;
+}
+/* Add this to your Productdetails.css file */
+
+/* Breadcrumb Styling */
+.breadcrumb {
+  background-color: transparent;
+  padding: 0.5rem 0;
+  margin-bottom: 1rem;
+  font-size: 0.9rem;
+}
+
+.breadcrumb-item + .breadcrumb-item::before {
+  content: ">";
+  color: #6c757d;
+  padding: 0 0.5rem;
+}
+
+.breadcrumb-item a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.breadcrumb-item a:hover {
+  text-decoration: underline;
+}
+
+.breadcrumb-item.active {
+  color: #6c757d;
+}
+
+/* Optional: Make breadcrumb more compact on mobile */
+@media (max-width: 768px) {
+  .breadcrumb {
+    font-size: 0.8rem;
+  }
+
+  .breadcrumb-item + .breadcrumb-item::before {
+    padding: 0 0.3rem;
+  }
 }

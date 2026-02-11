@@ -1,5 +1,6 @@
 import { Footer } from "../components/footer.tsx";
 import { Link } from "react-router-dom";
+import { Helmet } from "react-helmet-async";
 import "./about.css";
 import souravImg from "../assets/creators/souravmitra.jpg";
 import utsaImg from "../assets/creators/utsa3.jpg";
@@ -13,14 +14,101 @@ export function AboutUs() {
 
   return (
     <>
+      {/* SEO Meta Tags */}
+      <Helmet>
+        <title>About Us | TOHFA BY US - Meet Sourav & Utsa Mitra</title>
+        <meta
+          name="description"
+          content="Learn about TOHFA BY US, founded by Sourav and Utsa Mitra. Your trusted destination for unique gifts, beautiful home decor, and stylish accessories. Contact us via WhatsApp, email, or phone."
+        />
+        <meta
+          name="keywords"
+          content="about TOHFA BY US, Sourav Mitra, Utsa Mitra, our story, contact us, gift shop owners, about us"
+        />
+
+        {/* Open Graph / Facebook */}
+        <meta property="og:type" content="website" />
+        <meta
+          property="og:url"
+          content="https://tohfabyus.vercel.app/aboutus"
+        />
+        <meta
+          property="og:title"
+          content="About Us | TOHFA BY US - Meet Sourav & Utsa Mitra"
+        />
+        <meta
+          property="og:description"
+          content="Learn about TOHFA BY US, founded by Sourav and Utsa Mitra. Contact us anytime!"
+        />
+        <meta
+          property="og:image"
+          content="https://tohfabyus.vercel.app/images/tohfa300.jpg"
+        />
+
+        {/* Twitter */}
+        <meta property="twitter:card" content="summary_large_image" />
+        <meta
+          property="twitter:url"
+          content="https://tohfabyus.vercel.app/aboutus"
+        />
+        <meta property="twitter:title" content="About Us | TOHFA BY US" />
+        <meta
+          property="twitter:description"
+          content="Learn about TOHFA BY US, founded by Sourav and Utsa Mitra."
+        />
+        <meta
+          property="twitter:image"
+          content="https://tohfabyus.vercel.app/images/tohfa300.jpg"
+        />
+
+        {/* Canonical URL */}
+        <link rel="canonical" href="https://tohfabyus.vercel.app/aboutus" />
+
+        {/* Organization Schema */}
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Organization",
+            name: "TOHFA BY US",
+            url: "https://tohfabyus.vercel.app",
+            logo: "https://tohfabyus.vercel.app/images/tohfa300.jpg",
+            description:
+              "Online store for unique gifts, home decor, and accessories",
+            founders: [
+              {
+                "@type": "Person",
+                name: "Sourav Mitra",
+                sameAs: "https://www.facebook.com/Souravseverus",
+              },
+              {
+                "@type": "Person",
+                name: "Utsa Mitra",
+                sameAs: "https://www.facebook.com/utsa.tarafdar.5",
+              },
+            ],
+            contactPoint: {
+              "@type": "ContactPoint",
+              telephone: "+91-983-667-6041",
+              contactType: "Customer Service",
+              email: "souravmitra045@gmail.com",
+              availableLanguage: ["English", "Hindi", "Bengali"],
+            },
+            sameAs: [
+              "https://www.facebook.com/share/1C28tw8Hpu/",
+              "https://www.instagram.com/tohfabyus?igsh=MTBlbWR2Z25sMTdl",
+            ],
+          })}
+        </script>
+      </Helmet>
+
       <div className="page-wrapper about-bg about-page">
         <div className="container-fluid page-content mt-3">
-          <h4 className="about-title d-flex">
+          <h1 className="about-title d-flex">
             <Link to="/" className="brand-link">
               <span className="about-highlight">TOHFA by US</span>
             </Link>{" "}
             from Sourav and Utsa Mitra.
-          </h4>
+          </h1>
           <p className="about-description mt-3">
             We'd love to hear from you. Reach out to us anytime.
           </p>
@@ -28,7 +116,7 @@ export function AboutUs() {
           <div className="contact-links mt-3 d-flex">
             {/* WhatsApp */}
             <a
-              href="https://wa.me/+7980062879"
+              href="https://wa.me/+917980062879"
               target="_blank"
               rel="noopener noreferrer"
               className="contact-item gap-2"
@@ -89,61 +177,73 @@ export function AboutUs() {
         </div>
 
         <div className="creators-section mb-5">
-          <h5 className="creators-title"> Messages from Us:</h5>
+          <h2 className="creators-title">Messages from Us:</h2>
 
           <div className="creators-grid">
             {/* Sourav */}
-            <div className="creator-card">
+            <div
+              className="creator-card"
+              itemScope
+              itemType="https://schema.org/Person">
               <img
                 src={souravImg}
-                alt="Sourav Mitra"
+                alt="Sourav Mitra - Co-founder of TOHFA BY US"
                 className="creator-image clickable"
                 onClick={() => openImage(souravImg)}
+                itemProp="image"
               />
-              <h6 className="creator-name">
+              <h3 className="creator-name">
                 <a
                   href="https://www.facebook.com/Souravseverus"
                   target="_blank"
-                  rel="noopener noreferrer">
-                  Sourav Mitra
+                  rel="noopener noreferrer"
+                  itemProp="url">
+                  <span itemProp="name">Sourav Mitra</span>
                 </a>
-              </h6>
+              </h3>
               <p className="creator-quote">"কিনলে কিনুন, নাহলে আসুন।"</p>
+              <meta itemProp="jobTitle" content="Co-founder" />
             </div>
 
             {/* Utsa */}
-            <div className="creator-card">
+            <div
+              className="creator-card"
+              itemScope
+              itemType="https://schema.org/Person">
               <img
                 src={utsaImg}
-                alt="Utsa Mitra"
+                alt="Utsa Mitra - Co-founder of TOHFA BY US"
                 className="creator-image clickable"
                 onClick={() => openImage(utsaImg)}
+                itemProp="image"
               />
-              <h6 className="creator-name">
+              <h3 className="creator-name">
                 <a
                   href="https://www.facebook.com/utsa.tarafdar.5"
                   target="_blank"
-                  rel="noopener noreferrer">
-                  Utsa Mitra
+                  rel="noopener noreferrer"
+                  itemProp="url">
+                  <span itemProp="name">Utsa Mitra</span>
                 </a>
-              </h6>
+              </h3>
               <p className="creator-quote">
                 " 'হারিয়ে যাওয়ার টিকিট' পড়বেন? রাখব? "
               </p>
+              <meta itemProp="jobTitle" content="Co-founder" />
             </div>
           </div>
         </div>
 
         <div className="follow-us mt-5">
-          <p className="follow-text">Follow us on :</p>
+          <p className="follow-text">Follow us on:</p>
           <div className="social-links d-flex">
             {/* Facebook */}
             <a
               href="https://www.facebook.com/share/1C28tw8Hpu/"
               target="_blank"
               rel="noopener noreferrer"
-              className="social-item"
-              aria-label="Facebook">
+              className="social-item facebook"
+              aria-label="Follow us on Facebook">
               <div className="icon-box me-3">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -163,8 +263,8 @@ export function AboutUs() {
               href="https://www.instagram.com/tohfabyus?igsh=MTBlbWR2Z25sMTdl"
               target="_blank"
               rel="noopener noreferrer"
-              className="social-item"
-              aria-label="Instagram">
+              className="social-item instagram"
+              aria-label="Follow us on Instagram">
               <div className="icon-box me-3">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
