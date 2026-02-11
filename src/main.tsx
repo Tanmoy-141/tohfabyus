@@ -5,6 +5,7 @@ import App from "./App.tsx";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { BrowserRouter } from "react-router-dom";
 import "./main.css";
+import { Analytics } from "@vercel/analytics/react";
 
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
@@ -13,5 +14,6 @@ createRoot(document.getElementById("root")!).render(
         <App />
       </BrowserRouter>
     </HelmetProvider>
+    <Analytics />
   </StrictMode>,
 );
