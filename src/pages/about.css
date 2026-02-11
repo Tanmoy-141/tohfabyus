@@ -1,7 +1,10 @@
 .about-title {
   display: flex;
-  align-items: baseline; /* key fix */
+  flex-wrap: wrap; /* allow wrapping */
+  align-items: center;
   gap: 6px;
+  font-size: clamp(1.2rem, 3vw, 2rem); /* responsive font */
+  line-height: 1.2;
 }
 
 /* About page links only */
@@ -11,15 +14,15 @@
   font-weight: 500;
   margin: 5px;
   display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
   transition:
     transform 0.35s ease,
     opacity 0.35s ease;
 }
 
 .about-highlight {
-  display: flex;
-  align-items: baseline;
-  font-size: 1.5rem;
+  font-size: inherit; /* prevent oversized text */
   color: #da0808 !important;
 }
 
@@ -72,8 +75,8 @@
 
 /* Image */
 .creator-image {
-  width: 220px;
-  height: 220px;
+  width: clamp(120px, 30vw, 220px);
+  height: clamp(120px, 30vw, 220px);
   object-fit: cover;
   border-radius: 50%;
   margin-bottom: 0.8rem;
@@ -226,4 +229,36 @@
   display: flex;
   align-items: center;
   gap: 12px;
+}
+
+@media (max-width: 768px) {
+  .creators-grid {
+    gap: 1.2rem;
+  }
+
+  .creator-card {
+    max-width: 180px;
+  }
+}
+
+@media (max-width: 768px) {
+  .about-title {
+    font-size: 1.4rem;
+  }
+
+  .creator-name {
+    font-size: 1rem;
+  }
+
+  .creator-quote {
+    font-size: 0.85rem;
+  }
+
+  .creators-title {
+    font-size: 1.3rem;
+  }
+
+  .follow-text {
+    font-size: 0.95rem;
+  }
 }
