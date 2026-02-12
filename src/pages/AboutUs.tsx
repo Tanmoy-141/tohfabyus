@@ -136,7 +136,7 @@ export function AboutUs() {
 
             {/* Email */}
             <a
-              href="mailto:souravmitra045@gmail.com"
+              href="mailto:tohfabyus@gmail.com"
               className="contact-item gap-2"
               role="link"
               aria-label="Send us an email">
