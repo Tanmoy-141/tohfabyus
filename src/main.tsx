@@ -6,6 +6,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import { BrowserRouter } from "react-router-dom";
 import "./main.css";
 import { Analytics } from "@vercel/analytics/react";
+import { SpeedInsights } from "@vercel/speed-insights/react";
 
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
@@ -15,5 +16,6 @@ createRoot(document.getElementById("root")!).render(
       </BrowserRouter>
     </HelmetProvider>
     <Analytics />
+    <SpeedInsights />
   </StrictMode>,
 );
