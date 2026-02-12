@@ -5,7 +5,7 @@
   <!-- Homepage -->
   <url>
     <loc>https://tohfabyus.vercel.app/</loc>
-    <lastmod>2024-02-11</lastmod>
+    <lastmod>2026-02-11</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
@@ -13,7 +13,7 @@
   <!-- Gift Items -->
   <url>
     <loc>https://tohfabyus.vercel.app/gift-items</loc>
-    <lastmod>2024-02-11</lastmod>
+    <lastmod>2026-02-11</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.9</priority>
   </url>
@@ -21,7 +21,7 @@
   <!-- Home Decor -->
   <url>
     <loc>https://tohfabyus.vercel.app/home-decor</loc>
-    <lastmod>2024-02-11</lastmod>
+    <lastmod>2026-02-11</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.9</priority>
   </url>
@@ -29,7 +29,7 @@
   <!-- Accessories -->
   <url>
     <loc>https://tohfabyus.vercel.app/accessories</loc>
-    <lastmod>2024-02-11</lastmod>
+    <lastmod>2026-02-11</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.9</priority>
   </url>
@@ -37,7 +37,7 @@
   <!-- Wishlist -->
   <url>
     <loc>https://tohfabyus.vercel.app/wishlist</loc>
-    <lastmod>2024-02-11</lastmod>
+    <lastmod>2026-02-11</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -45,7 +45,7 @@
   <!-- Cart -->
   <url>
     <loc>https://tohfabyus.vercel.app/cart</loc>
-    <lastmod>2024-02-11</lastmod>
+    <lastmod>2026-02-11</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -53,7 +53,7 @@
   <!-- About Us -->
   <url>
     <loc>https://tohfabyus.vercel.app/aboutus</loc>
-    <lastmod>2024-02-11</lastmod>
+    <lastmod>2026-02-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
@@ -61,7 +61,7 @@
   <!-- Login -->
   <url>
     <loc>https://tohfabyus.vercel.app/login</loc>
-    <lastmod>2024-02-11</lastmod>
+    <lastmod>2026-02-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -69,7 +69,7 @@
   <!-- Signup -->
   <url>
     <loc>https://tohfabyus.vercel.app/signup</loc>
-    <lastmod>2024-02-11</lastmod>
+    <lastmod>2026-02-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
