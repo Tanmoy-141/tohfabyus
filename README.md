@@ -1,73 +1,140 @@
-# React + TypeScript + Vite
+# 🛍️ Tohfa By Us
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+> A modern e-commerce platform for gifts and home decor - Built as a learning project with React + TypeScript
 
-Currently, two official plugins are available:
+[![Live Demo](https://img.shields.io/badge/demo-live-success?style=flat-square)](https://tohfabyus.vercel.app/)
+[![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=flat-square&logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
+[![React](https://img.shields.io/badge/React-20232A?style=flat-square&logo=react&logoColor=61DAFB)](https://reactjs.org/)
+[![Vite](https://img.shields.io/badge/Vite-646CFF?style=flat-square&logo=vite&logoColor=white)](https://vitejs.dev/)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+**🌐 Live Site:** [tohfabyus.vercel.app](https://tohfabyus.vercel.app/)
 
-## React Compiler
+---
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## 📖 About
 
-## Expanding the ESLint configuration
+Tohfa By Us is an e-commerce frontend application where users can browse and shop for unique gifts and home decor items. This project was built to learn modern web development practices including React, TypeScript, and production deployment.
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## ✨ Features
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+- 🛒 Shopping cart functionality
+- 📱 Responsive design for all devices
+- 🎨 Clean, modern UI
+- ⚡ Lightning-fast performance with Vite
+- 📊 Google Analytics & Vercel Speed Analytics integration
+- 🔍 Product browsing and filtering
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+## 🚀 Tech Stack
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+- **Frontend Framework:** React 18
+- **Language:** TypeScript
+- **Build Tool:** Vite
+- **Styling:** CSS
+- **Deployment:** Vercel
+- **Code Quality:** ESLint + Prettier
+- **Analytics:** Google Analytics 4 + Vercel Speed Analytics
+
+## 💻 Getting Started
+
+### Prerequisites
+
+- Node.js (v18 or higher)
+- npm or yarn
+
+### Installation
+
+```bash
+# Clone the repository
+git clone https://github.com/Tanmoy-141/tohfabyus.git
+
+# Navigate to project directory
+cd tohfabyus
+
+# Install dependencies
+npm install
+
+# Start development server
+npm run dev
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+The application will be available at `http://localhost:5173`
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## 🛠️ Available Scripts
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```bash
+npm run dev          # Start development server
+npm run build        # Build for production
+npm run preview      # Preview production build
+npm run lint         # Run ESLint for code quality
 ```
+
+## 📁 Project Structure
+
+```
+tohfabyus/
+├── public/             # Static assets
+├── src/
+│   ├── components/     # React components
+│   ├── assets/         # Images, fonts, etc.
+│   └── main.tsx        # Application entry point
+├── index.html          # HTML template
+├── package.json        # Dependencies
+└── vite.config.ts      # Vite configuration
+```
+
+## 🌐 Deployment
+
+This project is automatically deployed to Vercel. Every push to the `main` branch triggers a new deployment.
+
+**Deployment Stats:**
+
+- 44 successful deployments
+- Continuous deployment enabled
+- Performance monitoring active
+
+## 📊 Analytics & Monitoring
+
+- **Google Analytics 4:** User behavior tracking
+- **Vercel Speed Analytics:** Real-time performance monitoring
+
+## 🎯 Learning Outcomes
+
+Through this project, I gained hands-on experience with:
+
+✅ Building React applications with TypeScript  
+✅ Component-based architecture  
+✅ State management and hooks  
+✅ Modern build tools (Vite)  
+✅ Code quality tools (ESLint, Prettier)  
+✅ Production deployment and CI/CD  
+✅ Analytics integration  
+✅ Performance optimization
+
+## 🔮 Future Enhancements
+
+- [ ] Add user authentication
+- [ ] Implement product search
+- [ ] Add product filtering by category
+- [ ] Backend integration
+- [ ] Payment gateway integration
+- [ ] Order history and tracking
+- [ ] Product reviews and ratings
+
+## 👨‍💻 Author
+
+**Tanmoy**
+
+- GitHub: [@Tanmoy-141](https://github.com/Tanmoy-141)
+- Project Link: [https://github.com/Tanmoy-141/tohfabyus](https://github.com/Tanmoy-141/tohfabyus)
+
+## 📝 License
+
+This project is open source and available under the [MIT License](LICENSE).
+
+---
+
+**⭐ If you found this project helpful or interesting, please consider giving it a star!**
+
+---
+
+**Note:** This is a frontend-only learning project. All product data is currently hardcoded. Backend integration is planned for future versions.
