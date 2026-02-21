@@ -26,34 +26,32 @@ function App() {
         <WishlistProvider>
           <SearchProvider>
             <CartProvider>
-              <OrdersProvider>
-                <div className="app-root">
-                  <Header />
-                  <Container className="mb-4 flex-fill">
-                    <Routes>
-                      <Route path="/" element={<Home />} />
-                      <Route path="/gift-items" element={<GiftItems />} />
-                      <Route path="/home-decor" element={<HomeDecor />} />
-                      <Route path="/accessories" element={<Accessories />} />
-                      {/* Product Details Route */}
-                      <Route path="/product/:id" element={<ProductDetails />} />
-                      <Route path="/wishlist" element={<Wishlist />} />
-                      <Route path="/cart" element={<Cart />} />
-                      <Route path="/aboutus" element={<AboutUs />} />
-                      <Route path="/login" element={<Login />} />
-                      <Route path="/signup" element={<Signup />} />
-                      <Route
-                        path="/account"
-                        element={
-                          <ProtectedRoute>
-                            <Account />
-                          </ProtectedRoute>
-                        }
-                      />
-                    </Routes>
-                  </Container>
-                </div>
-              </OrdersProvider>
+              <div className="app-root">
+                <Header />
+                <Container className="mb-4 flex-fill">
+                  <Routes>
+                    <Route path="/" element={<Home />} />
+                    <Route path="/gift-items" element={<GiftItems />} />
+                    <Route path="/home-decor" element={<HomeDecor />} />
+                    <Route path="/accessories" element={<Accessories />} />
+                    {/* Product Details Route */}
+                    <Route path="/product/:id" element={<ProductDetails />} />
+                    <Route path="/wishlist" element={<Wishlist />} />
+                    <Route path="/cart" element={<Cart />} />
+                    <Route path="/aboutus" element={<AboutUs />} />
+                    <Route path="/login" element={<Login />} />
+                    <Route path="/signup" element={<Signup />} />
+                    <Route
+                      path="/account"
+                      element={
+                        <ProtectedRoute>
+                          <Account />
+                        </ProtectedRoute>
+                      }
+                    />
+                  </Routes>
+                </Container>
+              </div>
             </CartProvider>
           </SearchProvider>
         </WishlistProvider>
