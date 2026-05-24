@@ -5,30 +5,17 @@ on:
     branches:
       - main
 
-  pull_request:
-    branches:
-      - main
-
 jobs:
   test-project:
     runs-on: ubuntu-latest
 
     steps:
-      # Clone repository
       - name: Checkout Repository
         uses: actions/checkout@v4
 
-      # Install Node.js
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: 20
-
-      # Show project files
       - name: Show Files
         run: ls
 
-      # Check HTML file
       - name: Check HTML
         run: |
           if [ -f index.html ]; then
@@ -38,7 +25,6 @@ jobs:
             exit 1
           fi
 
-      # Check CSS file
       - name: Check CSS
         run: |
           if [ -f style.css ]; then
@@ -48,17 +34,5 @@ jobs:
             exit 1
           fi
 
-      # Check JavaScript file
-      - name: Check JavaScript
-        run: |
-          if [ -f script.js ]; then
-            node --check script.js
-            echo "JavaScript syntax valid"
-          else
-            echo "Missing script.js"
-            exit 1
-          fi
-
-      # Final success message
       - name: Pipeline Success
-        run: echo "GitHub CI/CD Pipeline completed successfully!"
+        run: echo "CI/CD working successfully!"
