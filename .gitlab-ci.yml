@@ -6,18 +6,6 @@ test-project:
   image: node:20
   script:
     - ls
-    - |
-      if [ -f index.html ]; then
-        echo "HTML file exists"
-      else
-        echo "Missing index.html"
-        exit 1
-      fi
-    - |
-      if [ -f src/index.css ]; then
-        echo "CSS file exists"
-      else
-        echo "Missing src/index.css"
-        exit 1
-      fi
+    - if [ -f index.html ]; then echo "HTML file exists"; else echo "Missing index.html"; exit 1; fi
+    - if [ -f src/index.css ]; then echo "CSS file exists"; else echo "Missing src/index.css"; exit 1; fi
     - echo "CI/CD working successfully!"
