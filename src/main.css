@@ -2,7 +2,7 @@
    APP BACKGROUND
 ================================ */
 .app-bg {
- background:linear-gradient(
+  background: linear-gradient(
     135deg,
     rgba(156, 209, 253, 0.288),
     rgba(236, 189, 183, 0.24),
@@ -10,7 +10,6 @@
     rgba(156, 209, 253, 0.301)
   );
 }
-
 
 /* ===============================
    NAVBAR - MODERN MINIMAL
@@ -58,7 +57,6 @@
   object-fit: cover;
   transition: transform 0.3s ease;
   box-shadow: 8px 8px 8px rgba(0, 0, 0, 0.04);
-
 }
 
 .brand-logo:hover {
@@ -81,7 +79,7 @@
 }
 
 .brand-title:hover {
-   transform: scale(1.05);
+  transform: scale(1.05);
 }
 
 .brand-highlight {
@@ -93,7 +91,7 @@
 }
 
 .home-highlight {
-  font-family: 'FMBoylar sans pro', sans-serif;
+  font-family: "FMBoylar sans pro", sans-serif;
   font-weight: 600;
   font-size: 1.5rem;
   color: #c93838;
@@ -120,7 +118,7 @@
 
 .home-card {
   padding: 125px 50px;
- background: linear-gradient(
+  background: linear-gradient(
     120deg,
     #76c1ffef,
     #8597ffea,
@@ -129,11 +127,9 @@
   );
   border-bottom: 0px solid rgba(0, 0, 0, 0.562);
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.397);
- 
-  width: 100%;
- 
-}
 
+  width: 100%;
+}
 
 /* ===============================
    NAV LINKS - CLEAN & MINIMAL
@@ -189,7 +185,9 @@
 ================================ */
 .nav-arrow {
   display: inline-block;
-  transition: transform 0.3s ease, opacity 0.3s ease;
+  transition:
+    transform 0.3s ease,
+    opacity 0.3s ease;
   opacity: 0;
 }
 
@@ -530,7 +528,7 @@ body {
   .custom-navbar-toggle {
     background: none;
   }
-  
+
   .custom-navbar-toggle:hover {
     background: rgba(212, 22, 22, 0.08);
   }
@@ -550,16 +548,16 @@ body {
     height: 50px;
     width: 50px;
   }
-  
+
   .header-actions {
     gap: 1rem;
   }
-  
+
   .nav-link-custom {
     font-size: 0.85rem;
     padding: 0.75rem 0.875rem !important;
   }
-  
+
   /* Adjust watermark size for mobile */
   .home-bg::before,
   .about-bg::before,

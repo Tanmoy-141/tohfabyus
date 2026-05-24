@@ -40,25 +40,29 @@ export function Account() {
             <ul className="account-nav">
               <li
                 className={tab === "profile" ? "active" : ""}
-                onClick={() => setTab("profile")}>
+                onClick={() => setTab("profile")}
+              >
                 Profile
               </li>
 
               <li
                 className={tab === "orders" ? "active" : ""}
-                onClick={() => setTab("orders")}>
+                onClick={() => setTab("orders")}
+              >
                 Orders
               </li>
 
               <li
                 className={tab === "addresses" ? "active" : ""}
-                onClick={() => setTab("addresses")}>
+                onClick={() => setTab("addresses")}
+              >
                 Addresses
               </li>
 
               <li
                 className={tab === "settings" ? "active" : ""}
-                onClick={() => setTab("settings")}>
+                onClick={() => setTab("settings")}
+              >
                 Settings
               </li>
             </ul>

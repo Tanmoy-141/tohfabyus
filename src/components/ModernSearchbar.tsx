@@ -48,7 +48,8 @@ export function ModernSearchBar() {
           stroke="currentColor"
           strokeWidth="2"
           strokeLinecap="round"
-          strokeLinejoin="round">
+          strokeLinejoin="round"
+        >
           <circle cx="11" cy="11" r="8"></circle>
           <path d="m21 21-4.35-4.35"></path>
         </svg>
@@ -71,14 +72,16 @@ export function ModernSearchBar() {
               clearSearch();
               setIsOpen(false);
             }}
-            type="button">
+            type="button"
+          >
             <svg
               width="14"
               height="14"
               viewBox="0 0 24 24"
               fill="none"
               stroke="currentColor"
-              strokeWidth="2">
+              strokeWidth="2"
+            >
               <line x1="18" y1="6" x2="6" y2="18"></line>
               <line x1="6" y1="6" x2="18" y2="18"></line>
             </svg>
@@ -100,7 +103,8 @@ export function ModernSearchBar() {
                   <div
                     key={result.id}
                     className="search-result-item"
-                    onClick={() => handleResultClick(result.path)}>
+                    onClick={() => handleResultClick(result.path)}
+                  >
                     <div className="search-result-icon">
                       {result.type === "product" && "imgurl" in result && (
                         <img src={result.imgurl as string} alt={result.title} />
@@ -128,7 +132,8 @@ export function ModernSearchBar() {
                       viewBox="0 0 24 24"
                       fill="none"
                       stroke="currentColor"
-                      strokeWidth="2">
+                      strokeWidth="2"
+                    >
                       <polyline points="9 18 15 12 9 6"></polyline>
                     </svg>
                   </div>

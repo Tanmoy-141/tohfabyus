@@ -127,7 +127,8 @@ export function SearchProvider({ children }: { children: React.ReactNode }) {
 
   return (
     <SearchContext.Provider
-      value={{ searchQuery, setSearchQuery, searchResults, clearSearch }}>
+      value={{ searchQuery, setSearchQuery, searchResults, clearSearch }}
+    >
       {children}
     </SearchContext.Provider>
   );

@@ -66,7 +66,8 @@ export function Orders() {
 
                 <div className="order-status-row">
                   <span
-                    className={`order-status ${order.status.toLowerCase()}`}>
+                    className={`order-status ${order.status.toLowerCase()}`}
+                  >
                     {order.status === "Processing" && "🔄"}
                     {order.status === "Shipped" && "🚚"}
                     {order.status === "Delivered" && "✓"}
@@ -74,7 +75,8 @@ export function Orders() {
                   </span>
                   <button
                     className="toggle-details-btn"
-                    onClick={() => toggleOrderDetails(order.id)}>
+                    onClick={() => toggleOrderDetails(order.id)}
+                  >
                     {expandedOrder === order.id
                       ? "Hide Details ▲"
                       : "View Details ▼"}
@@ -149,7 +151,8 @@ export function Orders() {
                           ) {
                             cancelOrder(order.id);
                           }
-                        }}>
+                        }}
+                      >
                         Cancel Order
                       </button>
                     )}

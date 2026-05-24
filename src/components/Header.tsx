@@ -61,14 +61,16 @@ export function Header() {
       expand="lg"
       className="header-navbar"
       expanded={expanded}
-      onToggle={setExpanded}>
+      onToggle={setExpanded}
+    >
       <Container fluid>
         {/* BRAND */}
         <Navbar.Brand
           as={Link}
           to="/"
           className="header-brand"
-          onClick={handleNavClick}>
+          onClick={handleNavClick}
+        >
           <div className="brand-link">
             <img src={logo} alt="TOHFA logo" className="brand-logo" />
             <div className="brand-title-wrapper">
@@ -97,21 +99,24 @@ export function Header() {
             <NavLink
               to="/gift-items"
               className="nav-link-custom"
-              onClick={handleNavClick}>
+              onClick={handleNavClick}
+            >
               GIFT ITEMS
               <ChevronDown size={14} className="nav-arrow" />
             </NavLink>
             <NavLink
               to="/home-decor"
               className="nav-link-custom"
-              onClick={handleNavClick}>
+              onClick={handleNavClick}
+            >
               HOME DECOR
               <ChevronDown size={14} className="nav-arrow" />
             </NavLink>
             <NavLink
               to="/accessories"
               className="nav-link-custom"
-              onClick={handleNavClick}>
+              onClick={handleNavClick}
+            >
               ACCESSORIES
               <ChevronDown size={14} className="nav-arrow" />
             </NavLink>
@@ -127,14 +132,16 @@ export function Header() {
             <NavLink
               to="/wishlist"
               className="nav-icon-link"
-              onClick={handleNavClick}>
+              onClick={handleNavClick}
+            >
               <Heart size={18} />
             </NavLink>
 
             <NavLink
               to="/cart"
               className="nav-icon-link"
-              onClick={handleNavClick}>
+              onClick={handleNavClick}
+            >
               <ShoppingCart size={18} />
               {cartCount > 0 && <span className="cart-badge">{cartCount}</span>}
             </NavLink>
@@ -145,7 +152,8 @@ export function Header() {
                 as="div"
                 className="nav-icon-link user-dropdown-toggle"
                 role="button"
-                id="user-dropdown">
+                id="user-dropdown"
+              >
                 <User size={15} />
               </Dropdown.Toggle>
 

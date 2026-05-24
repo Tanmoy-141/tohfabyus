@@ -1,7 +1,7 @@
 .site-footer {
   margin-top: auto;
   padding: 1.5rem 1rem;
-  background: #fff5f5!important;
+  background: #fff5f5 !important;
 }
 
 /* Sections */
@@ -25,8 +25,8 @@
   align-items: center;
   gap: 6px;
   font-weight: 600;
-  color: #924242!important;
-  text-decoration: #924242 underline!important;
+  color: #924242 !important;
+  text-decoration: #924242 underline !important;
 }
 
 /* Text */
@@ -37,12 +37,14 @@
 }
 
 .footer-text a {
-  color: #924242!important;
-  transition: transform 0.35s ease, opacity 0.35s ease;
+  color: #924242 !important;
+  transition:
+    transform 0.35s ease,
+    opacity 0.35s ease;
 }
 
 .footer-text a:hover {
-  color: #df578b!important;
+  color: #df578b !important;
   transform: scale(1.05);
   opacity: 0.9;
 }
@@ -56,7 +58,7 @@
   flex: 1;
   padding: 6px 8px;
   border-radius: 6px;
-  border: 1px solid #e2c0c0!important;
+  border: 1px solid #e2c0c0 !important;
   font-size: 0.85rem;
 }
 
@@ -68,11 +70,13 @@
   color: #fff;
   font-size: 0.85rem;
   cursor: pointer;
-  transition: transform 0.3s ease, opacity 0.3s ease;
+  transition:
+    transform 0.3s ease,
+    opacity 0.3s ease;
 }
 
 .newsletter-form button:hover {
-  background: #df578b!important;
+  background: #df578b !important;
   transform: scale(1.05);
   opacity: 0.9;
 }

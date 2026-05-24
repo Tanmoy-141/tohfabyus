@@ -104,7 +104,8 @@ export function Signup() {
                 variant="danger"
                 dismissible
                 onClose={() => setError("")}
-                className="modern-alert">
+                className="modern-alert"
+              >
                 {error}
               </Alert>
             )}
@@ -162,7 +163,8 @@ export function Signup() {
                   <button
                     type="button"
                     onClick={() => setShowPassword(!showPassword)}
-                    className="password-toggle">
+                    className="password-toggle"
+                  >
                     {showPassword ? <EyeOff size={18} /> : <Eye size={18} />}
                   </button>
                 </div>
@@ -184,7 +186,8 @@ export function Signup() {
                   <button
                     type="button"
                     onClick={() => setShowConfirmPassword(!showConfirmPassword)}
-                    className="password-toggle">
+                    className="password-toggle"
+                  >
                     {showConfirmPassword ? (
                       <EyeOff size={18} />
                     ) : (

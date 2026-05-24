@@ -209,7 +209,8 @@ export function ProductDetails() {
           <Button
             variant="outline-secondary"
             className="back-btn mb-4"
-            onClick={() => navigate(-1)}>
+            onClick={() => navigate(-1)}
+          >
             ← Back
           </Button>
 
@@ -218,12 +219,14 @@ export function ProductDetails() {
             <ol
               className="breadcrumb"
               itemScope
-              itemType="https://schema.org/BreadcrumbList">
+              itemType="https://schema.org/BreadcrumbList"
+            >
               <li
                 className="breadcrumb-item"
                 itemProp="itemListElement"
                 itemScope
-                itemType="https://schema.org/ListItem">
+                itemType="https://schema.org/ListItem"
+              >
                 <a itemProp="item" href="/">
                   <span itemProp="name">Home</span>
                 </a>
@@ -233,7 +236,8 @@ export function ProductDetails() {
                 className="breadcrumb-item"
                 itemProp="itemListElement"
                 itemScope
-                itemType="https://schema.org/ListItem">
+                itemType="https://schema.org/ListItem"
+              >
                 <a itemProp="item" href={`/${categorySlug}`}>
                   <span itemProp="name">{product.category}</span>
                 </a>
@@ -244,7 +248,8 @@ export function ProductDetails() {
                 aria-current="page"
                 itemProp="itemListElement"
                 itemScope
-                itemType="https://schema.org/ListItem">
+                itemType="https://schema.org/ListItem"
+              >
                 <span itemProp="name">{product.name}</span>
                 <meta itemProp="position" content="3" />
               </li>
@@ -271,7 +276,8 @@ export function ProductDetails() {
                     }
                     aria-label={
                       wishlisted ? "Remove from wishlist" : "Add to wishlist"
-                    }>
+                    }
+                  >
                     {wishlisted ? "♥" : "♡"}
                   </button>
                   <img
@@ -299,7 +305,8 @@ export function ProductDetails() {
                     <span
                       itemProp="offers"
                       itemScope
-                      itemType="https://schema.org/Offer">
+                      itemType="https://schema.org/Offer"
+                    >
                       <meta itemProp="priceCurrency" content="INR" />
                       <meta
                         itemProp="price"
@@ -338,18 +345,21 @@ export function ProductDetails() {
                       <button
                         className="quantity-btn"
                         onClick={decreaseQuantity}
-                        aria-label="Decrease quantity">
+                        aria-label="Decrease quantity"
+                      >
                         -
                       </button>
                       <span
                         className="quantity-display"
-                        aria-label={`Quantity: ${quantity}`}>
+                        aria-label={`Quantity: ${quantity}`}
+                      >
                         {quantity}
                       </span>
                       <button
                         className="quantity-btn"
                         onClick={increaseQuantity}
-                        aria-label="Increase quantity">
+                        aria-label="Increase quantity"
+                      >
                         +
                       </button>
                     </div>
@@ -361,14 +371,16 @@ export function ProductDetails() {
                       variant="dark"
                       className="add-to-cart-btn"
                       onClick={handleAddToCart}
-                      aria-label={`Add ${product.name} to cart`}>
+                      aria-label={`Add ${product.name} to cart`}
+                    >
                       Add to Cart
                     </Button>
                     <Button
                       variant="success"
                       className="place-order-btn"
                       onClick={handlePlaceOrder}
-                      aria-label={`Place order for ${product.name}`}>
+                      aria-label={`Place order for ${product.name}`}
+                    >
                       Place Order
                     </Button>
                   </div>

@@ -69,7 +69,8 @@ export function StoreItem({
         <div className={`store-img-wrapper ${fit}`}>
           <button
             className={`wishlist-btn ${wishlisted ? "active" : ""}`}
-            onClick={handleWishlistToggle}>
+            onClick={handleWishlistToggle}
+          >
             ♥
           </button>
 
@@ -88,7 +89,8 @@ export function StoreItem({
             onClick={(e) => {
               e.preventDefault();
               decreaseQuantity();
-            }}>
+            }}
+          >
             -
           </button>
           <span className="quantity">{quantity}</span>
@@ -96,7 +98,8 @@ export function StoreItem({
             onClick={(e) => {
               e.preventDefault();
               increaseQuantity();
-            }}>
+            }}
+          >
             +
           </button>
 
@@ -109,7 +112,8 @@ export function StoreItem({
           size="sm"
           variant="success"
           className="mt-2"
-          onClick={handlePlaceOrder}>
+          onClick={handlePlaceOrder}
+        >
           Place Order
         </Button>
       </div>

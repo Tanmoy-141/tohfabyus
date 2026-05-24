@@ -86,7 +86,9 @@
   align-items: center;
   justify-content: center;
   color: #f86d6d;
-  transition: transform 0.35s ease, opacity 0.35s ease;
+  transition:
+    transform 0.35s ease,
+    opacity 0.35s ease;
 }
 
 .wishlist-icon-link:hover {

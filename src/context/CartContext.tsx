@@ -91,7 +91,8 @@ export function CartProvider({ children }: { children: React.ReactNode }) {
         decreaseQty,
         cartCount,
         totalPrice,
-      }}>
+      }}
+    >
       {children}
     </CartContext.Provider>
   );

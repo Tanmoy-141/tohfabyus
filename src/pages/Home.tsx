@@ -40,7 +40,8 @@ export function Home() {
                   as={Link as any} // eslint-disable-line @typescript-eslint/no-explicit-any
                   to="/gift-items"
                   variant="outline-danger"
-                  size="sm">
+                  size="sm"
+                >
                   <Gift size={20} className="me-2" />
                   Explore Gifts
                 </Button>
@@ -48,7 +49,8 @@ export function Home() {
                   as={Link as any} // eslint-disable-line @typescript-eslint/no-explicit-any
                   to="/home-decor"
                   variant="outline-danger"
-                  size="sm">
+                  size="sm"
+                >
                   <HomeIcon size={20} className="me-2" />
                   Revamp Home
                 </Button>
@@ -56,7 +58,8 @@ export function Home() {
                   as={Link as any} // eslint-disable-line @typescript-eslint/no-explicit-any
                   to="/accessories"
                   variant="outline-danger"
-                  size="sm">
+                  size="sm"
+                >
                   <Gift size={20} className="me-2" />
                   Find Accessories
                 </Button>
@@ -77,7 +80,8 @@ export function Home() {
             indicators={true}
             controls={true}
             interval={3000}
-            className="product-carousel">
+            className="product-carousel"
+          >
             {featuredItems.map((item) => (
               <Carousel.Item key={item.id}>
                 <div className="carousel-item-wrapper">
@@ -98,7 +102,8 @@ export function Home() {
                         to={`/${item.category.toLowerCase().replace(/ /g, "-")}`}
                         variant="outline-light"
                         size="sm"
-                        className="mt-2">
+                        className="mt-2"
+                      >
                         <span>View Collection</span>
                         <ChevronRight size={14} />
                       </Button>
@@ -144,7 +149,8 @@ export function Home() {
                     to="/aboutus"
                     variant="danger"
                     size="lg"
-                    className="d-flex align-items-center gap-2">
+                    className="d-flex align-items-center gap-2"
+                  >
                     <span>Learn More About Us</span>
                     <ChevronRight size={18} />
                   </Button>
@@ -178,7 +184,8 @@ export function Home() {
                   <Button
                     as={Link as any} // eslint-disable-line @typescript-eslint/no-explicit-any
                     to="/gift-items"
-                    variant="outline-danger">
+                    variant="outline-danger"
+                  >
                     Explore Gifts
                   </Button>
                 </Card.Body>
@@ -200,7 +207,8 @@ export function Home() {
                   <Button
                     as={Link as any} // eslint-disable-line @typescript-eslint/no-explicit-any
                     to="/home-decor"
-                    variant="outline-danger">
+                    variant="outline-danger"
+                  >
                     Explore Decor
                   </Button>
                 </Card.Body>
@@ -222,7 +230,8 @@ export function Home() {
                   <Button
                     as={Link as any} // eslint-disable-line @typescript-eslint/no-explicit-any
                     to="/accessories"
-                    variant="outline-danger">
+                    variant="outline-danger"
+                  >
                     Explore Accessories
                   </Button>
                 </Card.Body>

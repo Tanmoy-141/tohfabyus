@@ -86,7 +86,8 @@ export function OrdersProvider({ children }: { children: React.ReactNode }) {
 
   return (
     <OrdersContext.Provider
-      value={{ orders, placeOrder, cancelOrder, decreaseItemQuantity }}>
+      value={{ orders, placeOrder, cancelOrder, decreaseItemQuantity }}
+    >
       {children}
     </OrdersContext.Provider>
   );

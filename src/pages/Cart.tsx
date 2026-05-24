@@ -88,7 +88,8 @@ export function Cart() {
                 height="56"
                 fill="currentColor"
                 viewBox="0 0 16 16"
-                aria-hidden="true">
+                aria-hidden="true"
+              >
                 <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5" />
               </svg>
 
@@ -112,7 +113,8 @@ export function Cart() {
                     onClick={() => handleItemClick(item.id)}
                     style={{ cursor: "pointer" }}
                     itemScope
-                    itemType="https://schema.org/Product">
+                    itemType="https://schema.org/Product"
+                  >
                     <div className="cart-thumb">
                       <img
                         src={item.imgUrl}
@@ -132,7 +134,8 @@ export function Cart() {
                           className="me-2"
                           onClick={(e) =>
                             handleButtonClick(e, () => decreaseQty(item.id))
-                          }>
+                          }
+                        >
                           -
                         </Button>
 
@@ -143,7 +146,8 @@ export function Cart() {
                           className="me-3"
                           onClick={(e) =>
                             handleButtonClick(e, () => increaseQty(item.id))
-                          }>
+                          }
+                        >
                           +
                         </Button>
 
@@ -152,7 +156,8 @@ export function Cart() {
                           variant="danger"
                           onClick={(e) =>
                             handleButtonClick(e, () => removeFromCart(item.id))
-                          }>
+                          }
+                        >
                           Remove
                         </Button>
                       </div>
@@ -189,7 +194,8 @@ export function Cart() {
                     onClick={() => {
                       placeOrder(cartItems);
                       navigate("/account");
-                    }}>
+                    }}
+                  >
                     Proceed to Checkout
                   </Button>
                 </aside>

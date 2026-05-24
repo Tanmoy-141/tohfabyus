@@ -53,7 +53,7 @@
   padding: 1.75rem 1.75rem;
   border-radius: 20px;
   width: 100%;
-  box-shadow: 
+  box-shadow:
     0 4px 6px rgba(0, 0, 0, 0.03),
     0 10px 20px rgba(0, 0, 0, 0.05);
   border: 1px solid rgba(0, 0, 0, 0.06);
@@ -74,7 +74,7 @@
 
 .login-card:hover {
   transform: translateY(-2px);
-  box-shadow: 
+  box-shadow:
     0 8px 12px rgba(0, 0, 0, 0.05),
     0 20px 40px rgba(0, 0, 0, 0.08);
 }
@@ -247,18 +247,18 @@
 /* ===============================
    LOGIN BUTTON - MINIMAL RED
 ================================ */
-.login-btn { 
-  width: 100%; 
-  background: #d41616 !important; 
-  border: none !important; 
-  border-radius: 10px !important; 
-  padding: 0.6rem 1rem !important; 
-  font-weight: 600 !important; 
-  font-size: 0.85rem !important; 
-  letter-spacing: 0.3px !important; 
-  transition: all 0.3s ease !important; 
-  color: white !important; 
-  text-transform: uppercase; 
+.login-btn {
+  width: 100%;
+  background: #d41616 !important;
+  border: none !important;
+  border-radius: 10px !important;
+  padding: 0.6rem 1rem !important;
+  font-weight: 600 !important;
+  font-size: 0.85rem !important;
+  letter-spacing: 0.3px !important;
+  transition: all 0.3s ease !important;
+  color: white !important;
+  text-transform: uppercase;
   cursor: pointer;
   box-shadow: 0 2px 8px rgba(212, 22, 22, 0.2);
 }
@@ -409,7 +409,7 @@
   .password-toggle {
     right: 11px;
   }
-  
+
   .login-page::before {
     background-size: 280px auto;
   }

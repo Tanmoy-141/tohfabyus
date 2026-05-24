@@ -44,7 +44,8 @@ export function WishlistProvider({ children }: { children: React.ReactNode }) {
 
   return (
     <WishlistContext.Provider
-      value={{ wishlist, addToWishlist, removeFromWishlist, isWishlisted }}>
+      value={{ wishlist, addToWishlist, removeFromWishlist, isWishlisted }}
+    >
       {children}
     </WishlistContext.Provider>
   );

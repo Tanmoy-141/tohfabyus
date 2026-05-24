@@ -1,23 +1,21 @@
-
 .account-page {
   min-height: 100vh;
   padding: 1rem 1rem;
-  font-family: 'FMBolyar Sans Pro', sans-serif;
+  font-family: "FMBolyar Sans Pro", sans-serif;
   text-shadow: #777 1px 0px 1px;
 }
 
-.account-header{
-   font-size: 2rem;
-   font-family: 'FMBolyar Sans Pro', sans-serif;
-   text-shadow: #777 1px 1px 1px;
-   background: #ffffff25;
-   padding: 0.2rem 1rem;
-   padding-block: 2px 5px;
-   writing-mode: horizontal-tb;
-   border-bottom: 1px solid rgba(0,0,0,0.08);
-   box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+.account-header {
+  font-size: 2rem;
+  font-family: "FMBolyar Sans Pro", sans-serif;
+  text-shadow: #777 1px 1px 1px;
+  background: #ffffff25;
+  padding: 0.2rem 1rem;
+  padding-block: 2px 5px;
+  writing-mode: horizontal-tb;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
 }
-
 
 .account-container {
   max-width: 1100px;
