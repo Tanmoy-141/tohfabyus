@@ -1,11 +1,27 @@
 stages:
-  - test
+  - lint
 
-test-project:
-  stage: test
+lint-project:
+  stage: lint
   image: node:20
+
   script:
+    - echo "Starting GitLab CI/CD Pipeline"
+
+    # Install dependencies
+    - npm install
+
+    # Show files
     - ls
+
+    # Check HTML
     - if [ -f index.html ]; then echo "HTML file exists"; else echo "Missing index.html"; exit 1; fi
+
+    # Check CSS
     - if [ -f src/index.css ]; then echo "CSS file exists"; else echo "Missing src/index.css"; exit 1; fi
-    - echo "CI/CD working successfully!"
+
+    # Run ESLint
+    - npx eslint .
+
+    # Success message
+    - echo "GitLab CI/CD + ESLint working successfully!"
