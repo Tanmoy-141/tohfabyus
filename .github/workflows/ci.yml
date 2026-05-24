@@ -27,10 +27,10 @@ jobs:
 
       - name: Check CSS
         run: |
-          if [ -f main.css ]; then
+          if [ -f index.css ]; then
             echo "CSS file exists"
           else
-            echo "Missing main.css"
+            echo "Missing index.css"
             exit 1
           fi
 
