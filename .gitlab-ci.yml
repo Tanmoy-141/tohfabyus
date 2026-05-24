@@ -1,27 +1,49 @@
 stages:
-  - lint
+  - quality-check
 
-lint-project:
-  stage: lint
+frontend-checks:
+  stage: quality-check
   image: node:20
 
   script:
-    - echo "Starting GitLab CI/CD Pipeline"
+    # Start message
+    - echo "Starting GitLab Frontend CI Pipeline"
 
     # Install dependencies
     - npm install
 
     # Show files
-    - ls
+    - ls -la
 
-    # Check HTML
-    - if [ -f index.html ]; then echo "HTML file exists"; else echo "Missing index.html"; exit 1; fi
+    # Check HTML file exists
+    - |
+      if [ -f index.html ]; then
+        echo "HTML file exists"
+      else
+        echo "Missing index.html"
+        exit 1
+      fi
 
-    # Check CSS
-    - if [ -f src/index.css ]; then echo "CSS file exists"; else echo "Missing src/index.css"; exit 1; fi
+    # Check CSS file exists
+    - |
+      if [ -f src/index.css ]; then
+        echo "CSS file exists"
+      else
+        echo "Missing src/index.css"
+        exit 1
+      fi
 
     # Run ESLint
     - npx eslint .
 
-    # Success message
-    - echo "GitLab CI/CD + ESLint working successfully!"
+    # Run TypeScript checking
+    - npx tsc --noEmit
+
+    # Run Prettier formatting check
+    - npx prettier --check .
+
+    # Build project
+    - npm run build
+
+    # Final success message
+    - echo "All GitLab frontend checks passed successfully!"
